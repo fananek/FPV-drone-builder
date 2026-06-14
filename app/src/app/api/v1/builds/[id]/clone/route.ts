@@ -71,7 +71,7 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     }
 
     // 3. Perform cloning in a transaction
-    const clonedBuild = db.transaction((tx) => {
+    const clonedBuild = await db.transaction(async (tx) => {
       // Create clone build row
       const insertValues: Record<string, any> = {
         name: `Clone of ${originalBuild.name}`,
@@ -92,29 +92,37 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
         insertValues.anonymousSessionId = newAnonId;
       }
 
-      const [newBuild] = tx
+      const [newBuild] = await tx
         .insert(builds)
         .values(insertValues as any)
-        .returning()
-        .all();
+        .returning();
 
       // Copy components
-      const originalComponents = tx
+      const originalComponents = await tx
         .select()
         .from(buildComponents)
-        .where(eq(buildComponents.buildId, id))
-        .all();
+        .where(eq(buildComponents.buildId, id));
 
       if (originalComponents.length > 0) {
         const partIds = originalComponents.map((c) => c.partId).filter(Boolean) as string[];
         const customPartIds = originalComponents.map((c) => c.customPartId).filter(Boolean) as string[];
 
         const validPartIds = partIds.length > 0
-          ? new Set(tx.select({ id: parts.id }).from(parts).where(inArray(parts.id, partIds)).all().map((p) => p.id))
+          ? new Set(
+              (await tx
+                .select({ id: parts.id })
+                .from(parts)
+                .where(inArray(parts.id, partIds))).map((p) => p.id)
+            )
           : new Set<string>();
 
         const validCustomPartIds = customPartIds.length > 0
-          ? new Set(tx.select({ id: customParts.id }).from(customParts).where(inArray(customParts.id, customPartIds)).all().map((cp) => cp.id))
+          ? new Set(
+              (await tx
+                .select({ id: customParts.id })
+                .from(customParts)
+                .where(inArray(customParts.id, customPartIds))).map((cp) => cp.id)
+            )
           : new Set<string>();
 
         const clonedComps = originalComponents.map((c) => ({
@@ -125,15 +133,14 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
           customPartId: c.customPartId && validCustomPartIds.has(c.customPartId) ? c.customPartId : null,
           customNotes: c.customNotes,
         }));
-        tx.insert(buildComponents).values(clonedComps).run();
+        await tx.insert(buildComponents).values(clonedComps);
       }
 
       // Copy warnings snapshot
-      const originalWarnings = tx
+      const originalWarnings = await tx
         .select()
         .from(buildWarnings)
-        .where(eq(buildWarnings.buildId, id))
-        .all();
+        .where(eq(buildWarnings.buildId, id));
 
       if (originalWarnings.length > 0) {
         const clonedWarns = originalWarnings.map((w) => ({
@@ -143,7 +150,7 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
           message: w.message,
           suggestedFix: w.suggestedFix,
         }));
-        tx.insert(buildWarnings).values(clonedWarns).run();
+        await tx.insert(buildWarnings).values(clonedWarns);
       }
 
       return newBuild;

@@ -44,9 +44,9 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     }
 
     // 2. Perform upsert and update build metrics in a transaction
-    const result = db.transaction((tx) => {
+    const result = await db.transaction(async (tx) => {
       // Check if rating already exists
-      const [existingRating] = tx
+      const [existingRating] = await tx
         .select()
         .from(buildRatings)
         .where(
@@ -55,53 +55,49 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
             eq(buildRatings.userId, userId)
           )
         )
-        .limit(1)
-        .all();
+        .limit(1);
 
       if (existingRating) {
         // Update
-        tx
+        await tx
           .update(buildRatings)
           .set({
             stars: ratingStars,
             review: review || null,
             updatedAt: new Date(),
           })
-          .where(eq(buildRatings.id, existingRating.id))
-          .run();
+          .where(eq(buildRatings.id, existingRating.id));
       } else {
         // Insert
-        tx.insert(buildRatings).values({
+        await tx.insert(buildRatings).values({
           buildId: id,
           userId,
           stars: ratingStars,
           review: review || null,
-        }).run();
+        });
       }
 
       // Calculate denormalized metrics
-      const [aggResult] = tx
+      const [aggResult] = await tx
         .select({
           count: sql<number>`count(*)`,
           avg: sql<number>`avg(stars)`,
         })
         .from(buildRatings)
-        .where(eq(buildRatings.buildId, id))
-        .all();
+        .where(eq(buildRatings.buildId, id));
 
       const ratingCount = aggResult?.count || 0;
       const averageRating = aggResult?.avg ? parseFloat(aggResult.avg.toFixed(2)) : null;
 
       // Update builds record
-      const [updatedBuild] = tx
+      const [updatedBuild] = await tx
         .update(builds)
         .set({
           averageRating,
           ratingCount,
         })
         .where(eq(builds.id, id))
-        .returning()
-        .all();
+        .returning();
 
       return {
         averageRating: updatedBuild.averageRating,

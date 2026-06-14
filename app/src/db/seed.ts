@@ -6,7 +6,7 @@ async function main() {
   console.log("Seeding database...");
 
   // Disable foreign keys during seeding to allow clearing and reloading parts
-  db.run(sql`PRAGMA foreign_keys = OFF;`);
+  await db.run(sql`PRAGMA foreign_keys = OFF;`);
 
   try {
     // We can't easily truncate because of foreign keys, so we delete in order
@@ -1731,7 +1731,7 @@ async function main() {
 
   console.log(`Successfully seeded ${seededThrustTests.length} thrust test datasets.`);
   console.log("Seeding complete! Database is ready.");
-  db.run(sql`PRAGMA foreign_keys = ON;`);
+  await db.run(sql`PRAGMA foreign_keys = ON;`);
 }
 
 main().catch((err) => {

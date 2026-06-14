@@ -22,7 +22,7 @@ export async function POST(req: Request) {
       return err("BAD_REQUEST", "Payload must contain an array of parts to import.", 400);
     }
 
-    const importedCount = db.transaction((tx) => {
+    const importedCount = await db.transaction(async (tx) => {
       let count = 0;
       for (const item of partsToImport) {
         const { name, manufacturer, model, weightGrams, mainCategory, subCategory, attributes, isComposite, integratedPartIds } = item;
@@ -31,7 +31,7 @@ export async function POST(req: Request) {
           throw new Error(`Invalid part data: missing required fields for ${name || "unknown part"}`);
         }
 
-        tx.insert(parts).values({
+        await tx.insert(parts).values({
           name,
           manufacturer,
           model,
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
           isComposite: !!isComposite,
           integratedPartIds: integratedPartIds || [],
           isArchived: false,
-        }).run();
+        });
         count++;
       }
       return count;

@@ -1,8 +1,18 @@
-import Database from "better-sqlite3";
-import { drizzle } from "drizzle-orm/better-sqlite3";
+import { createClient } from "@libsql/client";
+import { drizzle } from "drizzle-orm/libsql";
 import * as schema from "./schema";
 
-const DATABASE_URL = process.env.DATABASE_URL ?? "./fpv-builder.db";
+let url = process.env.DATABASE_URL ?? "file:./fpv-builder.db";
+if (
+  !url.startsWith("libsql://") &&
+  !url.startsWith("https://") &&
+  !url.startsWith("http://") &&
+  !url.startsWith("file:")
+) {
+  url = `file:${url}`;
+}
+
+const DATABASE_AUTH_TOKEN = process.env.DATABASE_AUTH_TOKEN;
 
 // Singleton pattern — reuse the connection across hot-reloads in dev
 const globalForDb = globalThis as unknown as {
@@ -10,11 +20,11 @@ const globalForDb = globalThis as unknown as {
 };
 
 function createDb() {
-  const sqlite = new Database(DATABASE_URL);
-  // Enable WAL mode for better concurrent read performance
-  sqlite.pragma("journal_mode = WAL");
-  sqlite.pragma("foreign_keys = ON");
-  return drizzle(sqlite, { schema });
+  const client = createClient({
+    url,
+    authToken: DATABASE_AUTH_TOKEN,
+  });
+  return drizzle(client, { schema });
 }
 
 export const db = globalForDb._db ?? createDb();

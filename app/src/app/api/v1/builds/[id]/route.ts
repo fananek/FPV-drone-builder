@@ -177,19 +177,18 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
     }
 
     // Run updates in transaction
-    const result = db.transaction((tx) => {
+    const result = await db.transaction(async (tx) => {
       // 1. Update builds metadata
-      const [updatedBuild] = tx
+      const [updatedBuild] = await tx
         .update(builds)
         .set(updateData)
         .where(eq(builds.id, id))
-        .returning()
-        .all();
+        .returning();
 
       // 2. Update components if provided
       if (components !== undefined && Array.isArray(components)) {
         // Clear previous components
-        tx.delete(buildComponents).where(eq(buildComponents.buildId, id)).run();
+        await tx.delete(buildComponents).where(eq(buildComponents.buildId, id));
 
         // Insert new components
         if (components.length > 0) {
@@ -201,27 +200,26 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
             customPartId: c.customPartId || null,
             customNotes: c.customNotes || null,
           }));
-          tx.insert(buildComponents).values(compsToInsert).run();
+          await tx.insert(buildComponents).values(compsToInsert);
         }
       }
 
       // 3. Re-calculate warnings snapshot
       // Load current components from transaction to run calculations
-      const comps = tx
+      const comps = await tx
         .select()
         .from(buildComponents)
-        .where(eq(buildComponents.buildId, id))
-        .all();
+        .where(eq(buildComponents.buildId, id));
 
       const partIds = comps.map((c) => c.partId).filter(Boolean) as string[];
       const customPartIds = comps.map((c) => c.customPartId).filter(Boolean) as string[];
 
       const resolvedParts = partIds.length > 0
-        ? tx.select().from(parts).where(inArray(parts.id, partIds)).all()
+        ? await tx.select().from(parts).where(inArray(parts.id, partIds))
         : [];
 
       const resolvedCustomParts = customPartIds.length > 0
-        ? tx.select().from(customParts).where(inArray(customParts.id, customPartIds)).all()
+        ? await tx.select().from(customParts).where(inArray(customParts.id, customPartIds))
         : [];
 
       const partsMap = new Map(resolvedParts.map((p) => [p.id, p]));
@@ -286,7 +284,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
         }
 
         // Look for empirical thrust
-        const thrustTests = tx.select().from(thrustTestData).where(eq(thrustTestData.isArchived, false)).all();
+        const thrustTests = await tx.select().from(thrustTestData).where(eq(thrustTestData.isArchived, false));
         const empiricalTest = thrustTests.find(
           (t) =>
             t.motorId === motorComp.part?.id &&
@@ -317,7 +315,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
       const calculatedWarnings = runAllValidations(validationComps, auw, twr);
 
       // Clear old warnings
-      tx.delete(buildWarnings).where(eq(buildWarnings.buildId, id)).run();
+      await tx.delete(buildWarnings).where(eq(buildWarnings.buildId, id));
 
       // Insert new warnings
       if (calculatedWarnings.length > 0) {
@@ -328,7 +326,7 @@ export async function PATCH(req: Request, { params }: { params: Promise<{ id: st
           message: w.message,
           suggestedFix: w.suggestedFix || null,
         }));
-        tx.insert(buildWarnings).values(warningsToInsert).run();
+        await tx.insert(buildWarnings).values(warningsToInsert);
       }
 
       return {
