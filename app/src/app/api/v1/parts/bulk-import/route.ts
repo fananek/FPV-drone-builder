@@ -25,13 +25,14 @@ export async function POST(req: Request) {
     const importedCount = await db.transaction(async (tx) => {
       let count = 0;
       for (const item of partsToImport) {
-        const { name, manufacturer, model, weightGrams, mainCategory, subCategory, attributes, isComposite, integratedPartIds } = item;
+        const { id, name, manufacturer, model, weightGrams, mainCategory, subCategory, attributes, isComposite, integratedPartIds } = item;
 
         if (!name || !manufacturer || !model || weightGrams === undefined || !mainCategory || !subCategory) {
           throw new Error(`Invalid part data: missing required fields for ${name || "unknown part"}`);
         }
 
         await tx.insert(parts).values({
+          id: id || undefined,
           name,
           manufacturer,
           model,

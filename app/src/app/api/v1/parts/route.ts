@@ -88,7 +88,7 @@ export async function POST(req: Request) {
     }
 
     const body = await req.json();
-    const { name, manufacturer, model, weightGrams, mainCategory, subCategory, attributes, isComposite, integratedPartIds } = body;
+    const { id, name, manufacturer, model, weightGrams, mainCategory, subCategory, attributes, isComposite, integratedPartIds } = body;
 
     if (!name || !manufacturer || !model || weightGrams === undefined || !mainCategory || !subCategory) {
       return err("BAD_REQUEST", "Missing required fields.", 400);
@@ -97,6 +97,7 @@ export async function POST(req: Request) {
     const [newPart] = await db
       .insert(parts)
       .values({
+        id: id || undefined,
         name,
         manufacturer,
         model,

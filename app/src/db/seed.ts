@@ -1757,12 +1757,12 @@ async function main() {
     console.log("Exported Seed/thrust_tests.json");
 
     // 3. Write parts.csv
-    const partsCsvHeaders = "name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite\n";
+    const partsCsvHeaders = "id,name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite\n";
     const partsCsvRows = seededParts.map(p => {
       const name = p.name.includes(",") ? `"${p.name.replace(/"/g, '""')}"` : p.name;
       const manufacturer = p.manufacturer.includes(",") ? `"${p.manufacturer.replace(/"/g, '""')}"` : p.manufacturer;
       const model = p.model.includes(",") ? `"${p.model.replace(/"/g, '""')}"` : p.model;
-      return `${name},${manufacturer},${model},${p.weightGrams},${p.mainCategory},${p.subCategory},${p.isComposite}`;
+      return `${p.id},${name},${manufacturer},${model},${p.weightGrams},${p.mainCategory},${p.subCategory},${p.isComposite}`;
     }).join("\n");
     fs.writeFileSync(
       path.join(seedDir, "parts.csv"),
