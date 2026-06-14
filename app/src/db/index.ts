@@ -2,7 +2,7 @@ import { createClient } from "@libsql/client";
 import { drizzle } from "drizzle-orm/libsql";
 import * as schema from "./schema";
 
-let url = process.env.DATABASE_URL ?? "file:./fpv-builder.db";
+let url = process.env.TURSO_DATABASE_URL ?? process.env.DATABASE_URL ?? "file:./fpv-builder.db";
 if (
   !url.startsWith("libsql://") &&
   !url.startsWith("https://") &&
@@ -12,7 +12,7 @@ if (
   url = `file:${url}`;
 }
 
-const DATABASE_AUTH_TOKEN = process.env.DATABASE_AUTH_TOKEN;
+const DATABASE_AUTH_TOKEN = process.env.TURSO_AUTH_TOKEN ?? process.env.DATABASE_AUTH_TOKEN;
 
 // Singleton pattern — reuse the connection across hot-reloads in dev
 const globalForDb = globalThis as unknown as {
