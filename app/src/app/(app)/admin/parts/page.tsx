@@ -41,10 +41,10 @@ export default function AdminPartsPage() {
   const [formAttributes, setFormAttributes] = useState("");
   const [savingPart, setSavingPart] = useState(false);
 
-  // CSV Bulk Import State
-  const [csvText, setCsvText] = useState("");
-  const [importingCsv, setImportingCsv] = useState(false);
-  const [csvModalOpen, setCsvModalOpen] = useState(false);
+  // JSON Bulk Import State
+  const [jsonText, setJsonText] = useState("");
+  const [importingJson, setImportingJson] = useState(false);
+  const [jsonModalOpen, setJsonModalOpen] = useState(false);
 
   // Check role clearance
   const roles = session?.user?.roles || [];
@@ -210,67 +210,33 @@ export default function AdminPartsPage() {
     }
   };
 
-  // Bulk CSV parser import
-  const handleCsvImport = async (e: React.FormEvent) => {
+  // Bulk JSON parser import
+  const handleJsonImport = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!csvText.trim()) return;
+    if (!jsonText.trim()) return;
 
-    setImportingCsv(true);
+    setImportingJson(true);
 
     try {
-      // Basic CSV parse logic
-      const lines = csvText.split("\n").map(l => l.trim()).filter(Boolean);
-      if (lines.length <= 1) {
-        throw new Error("CSV payload must contain headers and at least 1 data row.");
+      const parsed = JSON.parse(jsonText.trim());
+      let partsToImport: any[] = [];
+      if (Array.isArray(parsed)) {
+        partsToImport = parsed;
+      } else if (parsed && typeof parsed === "object" && Array.isArray(parsed.parts)) {
+        partsToImport = parsed.parts;
+      } else {
+        throw new Error("JSON must be a parts array or an object containing a 'parts' array.");
       }
 
-      // Robust CSV line parser function
-      const parseCsvLine = (line: string): string[] => {
-        const result = [];
-        let current = '';
-        let inQuotes = false;
-        for (let i = 0; i < line.length; i++) {
-          const char = line[i];
-          if (char === '"') {
-            if (inQuotes && line[i + 1] === '"') {
-              current += '"';
-              i++;
-            } else {
-              inQuotes = !inQuotes;
-            }
-          } else if (char === ',' && !inQuotes) {
-            result.push(current.trim());
-            current = '';
-          } else {
-            current += char;
-          }
+      for (const p of partsToImport) {
+        if (!p.name || !p.manufacturer || !p.model || p.weightGrams === undefined || !p.mainCategory || !p.subCategory) {
+          throw new Error(`Part validation failed: missing required fields for "${p.name || "unknown"}"`);
         }
-        result.push(current.trim());
-        return result;
-      };
-
-      const headers = parseCsvLine(lines[0]);
-      const partsToImport = [];
-
-      for (let i = 1; i < lines.length; i++) {
-        const row = parseCsvLine(lines[i]);
-        const obj: any = {};
-        headers.forEach((h, idx) => {
-          const val = row[idx];
-          if (h === "weightGrams") {
-            obj[h] = parseFloat(val);
-          } else if (h === "isComposite") {
-            obj[h] = val === "true" || val === "1";
-          } else {
-            obj[h] = val;
-          }
-        });
-        
-        // Append empty attributes object if missing
-        if (!obj.attributes) {
-          obj.attributes = {};
+        p.weightGrams = parseFloat(p.weightGrams);
+        p.isComposite = !!p.isComposite;
+        if (!p.attributes) {
+          p.attributes = {};
         }
-        partsToImport.push(obj);
       }
 
       const res = await fetch("/api/v1/parts/bulk-import", {
@@ -286,13 +252,14 @@ export default function AdminPartsPage() {
 
       const body = await res.json();
       toast.success(body.data?.message || "Parts list imported successfully.");
-      setCsvText("");
+      setJsonText("");
+      setJsonModalOpen(false);
       loadParts();
     } catch (err: any) {
       console.error(err);
-      toast.error(err.message || "CSV parse error.");
+      toast.error(err.message || "JSON parse/validation error.");
     } finally {
-      setImportingCsv(false);
+      setImportingJson(false);
     }
   };
 
@@ -376,11 +343,11 @@ export default function AdminPartsPage() {
           </span>
           <div className="flex gap-2">
             <button
-              onClick={() => setCsvModalOpen(true)}
+              onClick={() => setJsonModalOpen(true)}
               className="px-4 py-2 bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center gap-1.5 cursor-pointer"
             >
               <Upload className="w-3.5 h-3.5" />
-              Bulk Import CSV
+              Bulk Import JSON
             </button>
             <button
               onClick={() => openModal(null)}
@@ -499,55 +466,54 @@ export default function AdminPartsPage() {
           </div>
         </div>
 
-      {/* CSV Bulk Catalog Import Modal */}
-      {csvModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+      {/* JSON Bulk Catalog Import Modal */}
+      {jsonModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-955/80 backdrop-blur-md p-4">
           <div className="w-full max-w-lg bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl relative glow-cyan flex flex-col">
             <div className="p-4 border-b border-slate-850 flex items-center justify-between">
               <h2 className="text-sm font-black uppercase tracking-wider text-white flex items-center gap-1.5">
                 <Upload className="w-4.5 h-4.5 text-cyan-400" />
-                CSV Bulk Catalog Import
+                JSON Bulk Catalog Import
               </h2>
               <button
-                onClick={() => setCsvModalOpen(false)}
+                onClick={() => setJsonModalOpen(false)}
                 className="p-1 text-slate-500 hover:text-white rounded-lg hover:bg-slate-900 transition cursor-pointer"
               >
                 <XIcon className="w-5 h-5" />
               </button>
             </div>
 
-            <form onSubmit={handleCsvImport} className="p-5 space-y-4 text-xs text-slate-200">
+            <form onSubmit={handleJsonImport} className="p-5 space-y-4 text-xs text-slate-200">
               <div>
                 <p className="text-[10px] text-slate-400 leading-relaxed font-semibold">
-                  Paste comma-separated rows. Expected headers:
-                  <code className="text-cyan-400 bg-slate-900 px-1 py-0.5 rounded font-mono mx-1">name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite</code>
+                  Paste a JSON array of parts or a JSON object with a <code className="text-cyan-400 bg-slate-900 px-1 py-0.5 rounded font-mono mx-1">parts</code> array containing part definitions.
                 </p>
               </div>
 
               <div>
                 <textarea
                   rows={8}
-                  value={csvText}
-                  onChange={(e) => setCsvText(e.target.value)}
-                  placeholder="name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite&#10;Apex Arms,ImpulseRC,Apex,12.5,FRAME,FRAME,false"
-                  className="w-full px-3 py-2 bg-slate-950/60 border border-slate-800 rounded-xl focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none text-xs text-white placeholder-slate-650 font-mono"
+                  value={jsonText}
+                  onChange={(e) => setJsonText(e.target.value)}
+                  placeholder={`[\n  {\n    "id": "frame-apex5",\n    "name": "Apex 5 Freestyle Frame",\n    "manufacturer": "ImpulseRC",\n    "model": "Apex 5",\n    "weightGrams": 125,\n    "mainCategory": "FRAME",\n    "subCategory": "FRAME",\n    "attributes": {}\n  }\n]`}
+                  className="w-full px-3 py-2 bg-slate-955/60 border border-slate-800 rounded-xl focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none text-xs text-white placeholder-slate-650 font-mono"
                 />
               </div>
 
               <div className="border-t border-slate-855 pt-4 flex justify-end gap-3">
                 <button
                   type="button"
-                  onClick={() => setCsvModalOpen(false)}
+                  onClick={() => setJsonModalOpen(false)}
                   className="px-4 py-2 border border-slate-800 hover:border-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  disabled={importingCsv || !csvText.trim()}
-                  className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 disabled:opacity-50 text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl transition cursor-pointer flex items-center gap-1"
+                  disabled={importingJson || !jsonText.trim()}
+                  className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 disabled:opacity-50 text-slate-955 font-black text-xs uppercase tracking-wider rounded-xl transition cursor-pointer flex items-center gap-1"
                 >
-                  {importingCsv ? "Importing..." : (
+                  {importingJson ? "Importing..." : (
                     <>
                       <Upload className="w-3.5 h-3.5" />
                       Import Parts

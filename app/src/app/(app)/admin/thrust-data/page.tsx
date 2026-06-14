@@ -56,12 +56,12 @@ export default function AdminThrustDataPage() {
   const [isEmpirical, setIsEmpirical] = useState(true);
   const [uploadingThrust, setUploadingThrust] = useState(false);
 
-  const [csvImportOpen, setCsvImportOpen] = useState(false);
-  const [csvInputText, setCsvInputText] = useState("");
+  const [jsonImportOpen, setJsonImportOpen] = useState(false);
+  const [jsonInputText, setJsonInputText] = useState("");
 
-  const [bulkCsvModalOpen, setBulkCsvModalOpen] = useState(false);
-  const [bulkCsvText, setBulkCsvText] = useState("");
-  const [importingBulkCsv, setImportingBulkCsv] = useState(false);
+  const [bulkJsonModalOpen, setBulkJsonModalOpen] = useState(false);
+  const [bulkJsonText, setBulkJsonText] = useState("");
+  const [importingBulkJson, setImportingBulkJson] = useState(false);
 
   // Telemetry Grid Handlers
   const handleUpdatePoint = (index: number, field: keyof ThrustTestPoint, value: number) => {
@@ -273,77 +273,32 @@ export default function AdminThrustDataPage() {
     }
   };
 
-  // Bulk import multiple datasets via CSV
-  const handleBulkCsvImport = async (e: React.FormEvent) => {
+  // Bulk import multiple datasets via JSON
+  const handleBulkJsonImport = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!bulkCsvText.trim()) return;
-    setImportingBulkCsv(true);
+    if (!bulkJsonText.trim()) return;
+    setImportingBulkJson(true);
 
     try {
-      const lines = bulkCsvText.split("\n").map(l => l.trim()).filter(Boolean);
-      if (lines.length <= 1) {
-        throw new Error("CSV payload must contain headers and at least 1 data row.");
+      const parsed = JSON.parse(bulkJsonText.trim());
+      let testsToImport: any[] = [];
+      if (Array.isArray(parsed)) {
+        testsToImport = parsed;
+      } else if (parsed && typeof parsed === "object" && Array.isArray(parsed.tests)) {
+        testsToImport = parsed.tests;
+      } else {
+        throw new Error("JSON must be a thrust tests array or an object containing a 'tests' array.");
       }
 
-      // Robust CSV line parser function
-      const parseCsvLine = (line: string): string[] => {
-        const result = [];
-        let current = '';
-        let inQuotes = false;
-        for (let i = 0; i < line.length; i++) {
-          const char = line[i];
-          if (char === '"') {
-            if (inQuotes && line[i + 1] === '"') {
-              current += '"';
-              i++;
-            } else {
-              inQuotes = !inQuotes;
-            }
-          } else if (char === ',' && !inQuotes) {
-            result.push(current.trim());
-            current = '';
-          } else {
-            current += char;
-          }
+      for (const t of testsToImport) {
+        if (!t.motorId || !t.propellerId || t.batteryCellCount === undefined || !t.batteryChemistry || !t.testPoints) {
+          throw new Error("Invalid dataset: missing required fields (motorId, propellerId, batteryCellCount, batteryChemistry, testPoints).");
         }
-        result.push(current.trim());
-        return result;
-      };
-
-      const headers = parseCsvLine(lines[0]);
-      const testsToImport = [];
-
-      for (let i = 1; i < lines.length; i++) {
-        const row = parseCsvLine(lines[i]);
-        const obj: any = {};
-        
-        headers.forEach((h, idx) => {
-          const val = row[idx];
-          if (h === "batteryCellCount") {
-            obj[h] = parseInt(val, 10);
-          } else if (h === "isEmpirical") {
-            obj[h] = val === "true" || val === "1";
-          } else if (h === "testPoints") {
-            // Parse: throttle_current_thrust_volts;...
-            const pts = val.split(";").map((pRaw) => {
-              const parts = pRaw.split("_").map(Number);
-              if (parts.length < 4 || parts.some(isNaN)) {
-                throw new Error(`Invalid point format: ${pRaw}`);
-              }
-              return {
-                throttlePercent: parts[0],
-                currentAmps: parts[1],
-                thrustGrams: parts[2],
-                voltageVolts: parts[3],
-              };
-            });
-            obj[h] = pts;
-          } else {
-            obj[h] = val;
-          }
-        });
-        
-        testsToImport.push(obj);
+        t.batteryCellCount = parseInt(t.batteryCellCount, 10);
+        t.isEmpirical = t.isEmpirical !== undefined ? !!t.isEmpirical : true;
+        if (!Array.isArray(t.testPoints)) {
+          throw new Error("testPoints must be an array.");
+        }
       }
 
       const res = await fetch("/api/v1/thrust-tests/bulk-import", {
@@ -359,14 +314,14 @@ export default function AdminThrustDataPage() {
 
       const body = await res.json();
       toast.success(body.data?.message || "Thrust datasets imported successfully.");
-      setBulkCsvText("");
-      setBulkCsvModalOpen(false);
+      setBulkJsonText("");
+      setBulkJsonModalOpen(false);
       loadData();
     } catch (err: any) {
       console.error(err);
-      toast.error(err.message || "CSV parse error.");
+      toast.error(err.message || "JSON parse/validation error.");
     } finally {
-      setImportingBulkCsv(false);
+      setImportingBulkJson(false);
     }
   };
 
@@ -453,11 +408,11 @@ export default function AdminThrustDataPage() {
           </span>
           <div className="flex gap-2">
             <button
-              onClick={() => setBulkCsvModalOpen(true)}
+              onClick={() => setBulkJsonModalOpen(true)}
               className="px-4 py-2 bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition flex items-center gap-1.5 cursor-pointer"
             >
               <Upload className="w-3.5 h-3.5" />
-              Bulk Import CSV
+              Bulk Import JSON
             </button>
             <button
               onClick={() => openModal(null)}
@@ -699,11 +654,11 @@ export default function AdminThrustDataPage() {
                   <div className="flex gap-2">
                     <button
                       type="button"
-                      onClick={() => setCsvImportOpen(true)}
+                      onClick={() => setJsonImportOpen(true)}
                       className="px-2.5 py-1 bg-slate-900 border border-slate-800 hover:border-slate-700 text-white font-bold text-[9px] uppercase tracking-wider rounded-lg transition cursor-pointer flex items-center gap-1"
                     >
                       <Upload className="w-3 h-3 text-cyan-400" />
-                      Import CSV
+                      Import JSON
                     </button>
                     <button
                       type="button"
@@ -810,27 +765,26 @@ export default function AdminThrustDataPage() {
           </div>
         </div>
       )}
-
-      {/* CSV Telemetry Import Sub-Modal */}
-      {csvImportOpen && (
-        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-950/80 backdrop-blur-md p-4">
+      {/* JSON Telemetry Import Sub-Modal */}
+      {jsonImportOpen && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-955/80 backdrop-blur-md p-4">
           <div className="w-full max-w-sm bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl p-5 space-y-4 glow-cyan">
-            <h3 className="text-xs font-black uppercase tracking-wider text-white">Import Telemetry CSV</h3>
+            <h3 className="text-xs font-black uppercase tracking-wider text-white">Import Telemetry JSON</h3>
             <p className="text-[10px] text-slate-450 leading-relaxed font-semibold">
-              Paste comma-separated rows. Expected format:
-              <code className="text-cyan-400 bg-slate-950 px-1 py-0.5 rounded font-mono mx-1">throttle%,current,thrust,voltage</code>
+              Paste a JSON array of telemetry points. Expected format:
+              <code className="text-cyan-400 bg-slate-950 px-1 py-0.5 rounded font-mono mx-1">[{"{ throttlePercent, currentAmps, thrustGrams, voltageVolts }"}]</code>
             </p>
             <textarea
               rows={6}
-              value={csvInputText}
-              onChange={(e) => setCsvInputText(e.target.value)}
-              placeholder="25,5.2,180,15.2&#10;50,15.6,420,14.8&#10;75,28.4,750,14.2&#10;100,45.2,1120,13.6"
+              value={jsonInputText}
+              onChange={(e) => setJsonInputText(e.target.value)}
+              placeholder={`[\n  { "throttlePercent": 25, "currentAmps": 5.2, "thrustGrams": 180, "voltageVolts": 15.2 },\n  { "throttlePercent": 50, "currentAmps": 15.6, "thrustGrams": 420, "voltageVolts": 14.8 }\n]`}
               className="w-full px-3 py-2 bg-slate-950/60 border border-slate-800 rounded-xl outline-none text-xs text-white font-mono placeholder-slate-700 focus:border-cyan-505 focus:ring-1 focus:ring-cyan-505"
             />
             <div className="flex justify-end gap-2.5">
               <button
                 type="button"
-                onClick={() => setCsvImportOpen(false)}
+                onClick={() => setJsonImportOpen(false)}
                 className="px-3.5 py-2 border border-slate-850 text-white font-bold text-[10px] uppercase tracking-wider rounded-xl hover:border-slate-700 transition cursor-pointer"
               >
                 Cancel
@@ -839,30 +793,37 @@ export default function AdminThrustDataPage() {
                 type="button"
                 onClick={() => {
                   try {
-                    const lines = csvInputText.split("\n").map(l => l.trim()).filter(Boolean);
-                    const parsed = [];
-                    for (const line of lines) {
-                      const cols = line.split(",").map(Number);
-                      if (cols.length < 4 || cols.some(isNaN)) {
-                        throw new Error("Invalid CSV format in line. Expected format: throttle%,current,thrust,volts");
-                      }
-                      parsed.push({
-                        throttlePercent: cols[0],
-                        currentAmps: cols[1],
-                        thrustGrams: cols[2],
-                        voltageVolts: cols[3],
-                      });
+                    const parsedData = JSON.parse(jsonInputText.trim());
+                    if (!Array.isArray(parsedData)) {
+                      throw new Error("JSON must be a telemetry points array.");
                     }
+                    const parsed = parsedData.map((pt: any) => {
+                      const throttlePercent = pt.throttlePercent !== undefined ? pt.throttlePercent : (pt.throttle !== undefined ? pt.throttle : pt.throttle_percent);
+                      const currentAmps = pt.currentAmps !== undefined ? pt.currentAmps : (pt.current !== undefined ? pt.current : pt.current_amps);
+                      const thrustGrams = pt.thrustGrams !== undefined ? pt.thrustGrams : (pt.thrust !== undefined ? pt.thrust : pt.thrust_grams);
+                      const voltageVolts = pt.voltageVolts !== undefined ? pt.voltageVolts : (pt.voltage !== undefined ? pt.voltage : pt.voltage_volts);
+                      
+                      if (throttlePercent === undefined || currentAmps === undefined || thrustGrams === undefined || voltageVolts === undefined) {
+                        throw new Error("Invalid format. Expected keys: throttlePercent, currentAmps, thrustGrams, voltageVolts");
+                      }
+                      return {
+                        throttlePercent: parseFloat(throttlePercent),
+                        currentAmps: parseFloat(currentAmps),
+                        thrustGrams: parseFloat(thrustGrams),
+                        voltageVolts: parseFloat(voltageVolts),
+                        rpm: pt.rpm ? parseInt(pt.rpm, 10) : undefined,
+                      };
+                    });
                     if (parsed.length === 0) throw new Error("No telemetry data found.");
                     setFormTestPoints(parsed);
-                    setCsvInputText("");
-                    setCsvImportOpen(false);
+                    setJsonInputText("");
+                    setJsonImportOpen(false);
                     toast.success("Telemetry points parsed and loaded into the grid.");
                   } catch (errVal: any) {
-                    toast.error(errVal.message || "Failed to parse CSV inputs.");
+                    toast.error(errVal.message || "Failed to parse JSON inputs.");
                   }
                 }}
-                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 text-slate-950 font-black text-[10px] uppercase tracking-wider rounded-xl transition cursor-pointer"
+                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 text-slate-955 font-black text-[10px] uppercase tracking-wider rounded-xl transition cursor-pointer"
               >
                 Load Points
               </button>
@@ -871,45 +832,36 @@ export default function AdminThrustDataPage() {
         </div>
       )}
 
-      {/* CSV Bulk Importer Modal (For importing multiple datasets) */}
-      {bulkCsvModalOpen && (
+      {/* JSON Bulk Importer Modal (For importing multiple datasets) */}
+      {bulkJsonModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-955/80 backdrop-blur-md p-4">
           <div className="w-full max-w-lg bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl relative glow-cyan flex flex-col">
             <div className="p-4 border-b border-slate-850 flex items-center justify-between">
               <h2 className="text-sm font-black uppercase tracking-wider text-white flex items-center gap-1.5">
                 <Upload className="w-4.5 h-4.5 text-cyan-400" />
-                Bulk Import Thrust CSV
+                Bulk Import Thrust JSON
               </h2>
               <button
-                onClick={() => setBulkCsvModalOpen(false)}
+                onClick={() => setBulkJsonModalOpen(false)}
                 className="p-1 text-slate-500 hover:text-white rounded-lg hover:bg-slate-900 transition cursor-pointer"
               >
                 <span className="text-lg">×</span>
               </button>
             </div>
 
-            <form onSubmit={handleBulkCsvImport} className="p-5 space-y-4 text-xs text-slate-200">
+            <form onSubmit={handleBulkJsonImport} className="p-5 space-y-4 text-xs text-slate-200">
               <div>
                 <p className="text-[10px] text-slate-400 leading-relaxed font-semibold">
-                  Paste comma-separated rows. Expected headers:
-                  <code className="text-cyan-400 bg-slate-950 px-1 py-0.5 rounded font-mono mx-1">
-                    motorId,propellerId,batteryCellCount,batteryChemistry,sourceLabel,isEmpirical,testPoints
-                  </code>
-                </p>
-                <p className="text-[9px] text-slate-500 mt-1 leading-relaxed">
-                  For <code className="text-slate-400 font-mono">testPoints</code>, format as semicolon-separated points of underscore-separated numbers:
-                  <code className="text-cyan-400 bg-slate-950 px-1 py-0.5 rounded font-mono mx-1">
-                    throttle_current_thrust_voltage;...
-                  </code>
+                  Paste a JSON array of tests or a JSON object with a <code className="text-cyan-400 bg-slate-950 px-1 py-0.5 rounded font-mono mx-1">tests</code> array containing thrust test stand telemetry definitions.
                 </p>
               </div>
 
               <div>
                 <textarea
                   rows={8}
-                  value={bulkCsvText}
-                  onChange={(e) => setBulkCsvText(e.target.value)}
-                  placeholder="motorId,propellerId,batteryCellCount,batteryChemistry,sourceLabel,isEmpirical,testPoints&#10;motor-uuid,prop-uuid,4,LiPo,Benchmark Stand,true,25_5.2_180_15.2;50_15.6_420_14.8;75_28.4_750_14.2;100_45.2_1120_13.6"
+                  value={bulkJsonText}
+                  onChange={(e) => setBulkJsonText(e.target.value)}
+                  placeholder={`[\n  {\n    "motorId": "motor-uuid",\n    "propellerId": "prop-uuid",\n    "batteryCellCount": 4,\n    "batteryChemistry": "LiPo",\n    "sourceLabel": "Benchmark Stand",\n    "isEmpirical": true,\n    "testPoints": [\n      { "throttlePercent": 25, "currentAmps": 5.2, "thrustGrams": 180, "voltageVolts": 15.2 }\n    ]\n  }\n]`}
                   className="w-full px-3 py-2 bg-slate-955/60 border border-slate-800 rounded-xl focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none text-xs text-white placeholder-slate-650 font-mono"
                 />
               </div>
@@ -917,17 +869,17 @@ export default function AdminThrustDataPage() {
               <div className="border-t border-slate-855 pt-4 flex justify-end gap-3">
                 <button
                   type="button"
-                  onClick={() => setBulkCsvModalOpen(false)}
+                  onClick={() => setBulkJsonModalOpen(false)}
                   className="px-4 py-2 border border-slate-800 hover:border-slate-700 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition cursor-pointer"
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  disabled={importingBulkCsv || !bulkCsvText.trim()}
-                  className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 disabled:opacity-50 text-slate-950 font-black text-xs uppercase tracking-wider rounded-xl transition cursor-pointer flex items-center gap-1"
+                  disabled={importingBulkJson || !bulkJsonText.trim()}
+                  className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 disabled:opacity-50 text-slate-955 font-black text-xs uppercase tracking-wider rounded-xl transition cursor-pointer flex items-center gap-1"
                 >
-                  {importingBulkCsv ? "Importing..." : (
+                  {importingBulkJson ? "Importing..." : (
                     <>
                       <Upload className="w-3.5 h-3.5" />
                       Import Telemetry

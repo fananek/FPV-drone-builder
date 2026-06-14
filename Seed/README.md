@@ -6,10 +6,8 @@ This directory contains pre-configured catalog seed files for the FPV Drone Buil
 
 | File | Format | Purpose |
 | :--- | :--- | :--- |
-| **[`parts.json`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/parts.json)** | JSON | List of all 70 parts, formatted for programmatic API bulk import. |
-| **[`parts.csv`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/parts.csv)** | CSV | List of all parts, formatted for the Vercel admin dashboard UI upload. |
-| **[`thrust_tests.json`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/thrust_tests.json)** | JSON | Telemetry points for motor/prop/battery combos, formatted for API import. |
-| **[`thrust_tests.csv`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/thrust_tests.csv)** | CSV | Telemetry points, formatted for the Vercel admin dashboard UI upload. |
+| **[`parts.json`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/parts.json)** | JSON | List of all 70 parts, formatted for API and administrative UI bulk import. |
+| **[`thrust_tests.json`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/thrust_tests.json)** | JSON | Telemetry points for motor/prop/battery combos, formatted for API and administrative UI bulk import. |
 
 ---
 
@@ -34,13 +32,13 @@ If you have an account with `system_admin` or `metadata_admin` role credentials,
 
 ### 🔌 Parts Import
 1. Navigate to `https://your-domain.vercel.app/admin/parts`.
-2. Click **Bulk Import CSV**.
-3. Open **[`parts.csv`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/parts.csv)**, copy all of its contents, paste them into the dialog input box, and click **Import Parts**.
+2. Click **Bulk Import JSON**.
+3. Open **[`parts.json`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/parts.json)**, copy all of its contents, paste them into the dialog input box, and click **Import Parts**.
 
 ### ⚡ Thrust Test Stand Data Import
 1. Navigate to `https://your-domain.vercel.app/admin/thrust-data`.
-2. Click **Bulk Import CSV**.
-3. Open **[`thrust_tests.csv`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/thrust_tests.csv)**, copy all of its contents, paste them into the dialog input box, and click **Import Telemetry**.
+2. Click **Bulk Import JSON**.
+3. Open **[`thrust_tests.json`](file:///Users/fmx/Development/Antigravity/FPV_Builder/Seed/thrust_tests.json)**, copy all of its contents, paste them into the dialog input box, and click **Import Telemetry**.
 
 ---
 

@@ -1756,39 +1756,6 @@ async function main() {
     );
     console.log("Exported Seed/thrust_tests.json");
 
-    // 3. Write parts.csv
-    const partsCsvHeaders = "id,name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite,attributes,integratedPartIds\n";
-    const partsCsvRows = seededParts.map(p => {
-      const name = p.name.includes(",") ? `"${p.name.replace(/"/g, '""')}"` : p.name;
-      const manufacturer = p.manufacturer.includes(",") ? `"${p.manufacturer.replace(/"/g, '""')}"` : p.manufacturer;
-      const model = p.model.includes(",") ? `"${p.model.replace(/"/g, '""')}"` : p.model;
-      const attributesEscaped = `"${JSON.stringify(p.attributes || {}).replace(/"/g, '""')}"`;
-      const integratedPartIdsEscaped = `"${JSON.stringify(p.integratedPartIds || []).replace(/"/g, '""')}"`;
-      return `${p.id},${name},${manufacturer},${model},${p.weightGrams},${p.mainCategory},${p.subCategory},${p.isComposite},${attributesEscaped},${integratedPartIdsEscaped}`;
-    }).join("\n");
-    fs.writeFileSync(
-      path.join(seedDir, "parts.csv"),
-      partsCsvHeaders + partsCsvRows,
-      "utf-8"
-    );
-    console.log("Exported Seed/parts.csv");
-
-    // 4. Write thrust_tests.csv
-    const thrustCsvHeaders = "motorId,propellerId,batteryCellCount,batteryChemistry,sourceLabel,isEmpirical,testPoints\n";
-    const thrustCsvRows = seededThrustTests.map(t => {
-      const sourceLabel = t.sourceLabel ? (t.sourceLabel.includes(",") ? `"${t.sourceLabel.replace(/"/g, '""')}"` : t.sourceLabel) : "";
-      const testPointsStr = t.testPoints.map(p => 
-        `${p.throttlePercent}_${p.currentAmps}_${p.thrustGrams}_${p.voltageVolts}`
-      ).join(";");
-      return `${t.motorId},${t.propellerId},${t.batteryCellCount},${t.batteryChemistry},${sourceLabel},${t.isEmpirical},${testPointsStr}`;
-    }).join("\n");
-    fs.writeFileSync(
-      path.join(seedDir, "thrust_tests.csv"),
-      thrustCsvHeaders + thrustCsvRows,
-      "utf-8"
-    );
-    console.log("Exported Seed/thrust_tests.csv");
-
   } catch (exportErr) {
     console.error("Failed to export seed files: ", exportErr);
   }
