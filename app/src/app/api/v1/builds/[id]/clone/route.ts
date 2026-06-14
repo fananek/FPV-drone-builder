@@ -165,11 +165,11 @@ export async function POST(req: Request, { params }: { params: Promise<{ id: str
     return response;
   } catch (errVal: any) {
     console.error("Clone build error: ", errVal);
-    
+
     if (errVal.message?.includes("UNIQUE constraint failed")) {
       return err("DUPLICATE_BUILD_NAME", "You already have a build with this name.", 400);
     }
-    
+
     return err("SERVER_ERROR", "An unexpected error occurred.", 500);
   }
 }

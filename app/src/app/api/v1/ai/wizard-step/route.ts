@@ -27,8 +27,8 @@ export async function POST(req: Request) {
     let filteredParts = candidateParts;
 
     if (framePart && framePart.attributes) {
-      const frameAttrs = typeof framePart.attributes === "string" 
-        ? JSON.parse(framePart.attributes) 
+      const frameAttrs = typeof framePart.attributes === "string"
+        ? JSON.parse(framePart.attributes)
         : framePart.attributes;
 
       if (targetSlot === "PROPELLER") {

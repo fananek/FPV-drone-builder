@@ -27,7 +27,7 @@ async function verifyBuildOwnership(build: typeof builds.$inferSelect) {
 export async function GET(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { id } = await params;
-    
+
     // Fetch build
     const [build] = await db
       .select()
