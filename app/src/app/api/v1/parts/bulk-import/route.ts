@@ -31,6 +31,24 @@ export async function POST(req: Request) {
           throw new Error(`Invalid part data: missing required fields for ${name || "unknown part"}`);
         }
 
+        let parsedAttributes = attributes || {};
+        if (typeof parsedAttributes === "string") {
+          try {
+            parsedAttributes = JSON.parse(parsedAttributes);
+          } catch (e) {
+            parsedAttributes = {};
+          }
+        }
+
+        let parsedIntegratedPartIds = integratedPartIds || [];
+        if (typeof parsedIntegratedPartIds === "string") {
+          try {
+            parsedIntegratedPartIds = JSON.parse(parsedIntegratedPartIds);
+          } catch (e) {
+            parsedIntegratedPartIds = [];
+          }
+        }
+
         await tx.insert(parts).values({
           id: id || undefined,
           name,
@@ -39,9 +57,9 @@ export async function POST(req: Request) {
           weightGrams: parseFloat(weightGrams),
           mainCategory: mainCategory as MainCategory,
           subCategory: subCategory as SubCategory,
-          attributes: attributes || {},
+          attributes: parsedAttributes,
           isComposite: !!isComposite,
-          integratedPartIds: integratedPartIds || [],
+          integratedPartIds: parsedIntegratedPartIds,
           isArchived: false,
         });
         count++;

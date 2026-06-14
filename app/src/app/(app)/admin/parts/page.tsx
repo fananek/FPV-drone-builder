@@ -224,11 +224,36 @@ export default function AdminPartsPage() {
         throw new Error("CSV payload must contain headers and at least 1 data row.");
       }
 
-      const headers = lines[0].split(",").map(h => h.trim().replace(/['"]/g, ""));
+      // Robust CSV line parser function
+      const parseCsvLine = (line: string): string[] => {
+        const result = [];
+        let current = '';
+        let inQuotes = false;
+        for (let i = 0; i < line.length; i++) {
+          const char = line[i];
+          if (char === '"') {
+            if (inQuotes && line[i + 1] === '"') {
+              current += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+          } else if (char === ',' && !inQuotes) {
+            result.push(current.trim());
+            current = '';
+          } else {
+            current += char;
+          }
+        }
+        result.push(current.trim());
+        return result;
+      };
+
+      const headers = parseCsvLine(lines[0]);
       const partsToImport = [];
 
       for (let i = 1; i < lines.length; i++) {
-        const row = lines[i].split(",").map(r => r.trim().replace(/['"]/g, ""));
+        const row = parseCsvLine(lines[i]);
         const obj: any = {};
         headers.forEach((h, idx) => {
           const val = row[idx];

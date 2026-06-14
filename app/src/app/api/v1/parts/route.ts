@@ -94,6 +94,24 @@ export async function POST(req: Request) {
       return err("BAD_REQUEST", "Missing required fields.", 400);
     }
 
+    let parsedAttributes = attributes || {};
+    if (typeof parsedAttributes === "string") {
+      try {
+        parsedAttributes = JSON.parse(parsedAttributes);
+      } catch (e) {
+        parsedAttributes = {};
+      }
+    }
+
+    let parsedIntegratedPartIds = integratedPartIds || [];
+    if (typeof parsedIntegratedPartIds === "string") {
+      try {
+        parsedIntegratedPartIds = JSON.parse(parsedIntegratedPartIds);
+      } catch (e) {
+        parsedIntegratedPartIds = [];
+      }
+    }
+
     const [newPart] = await db
       .insert(parts)
       .values({
@@ -104,9 +122,9 @@ export async function POST(req: Request) {
         weightGrams: parseFloat(weightGrams),
         mainCategory,
         subCategory,
-        attributes: attributes || {},
+        attributes: parsedAttributes,
         isComposite: !!isComposite,
-        integratedPartIds: integratedPartIds || [],
+        integratedPartIds: parsedIntegratedPartIds,
         isArchived: false,
       })
       .returning();

@@ -1,71 +1,71 @@
-id,name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite
-frame-mob7,Mobula7 V2 75mm Brushless Whoop Frame,HappyModel,Mobula7 V2,5.5,FRAME,FRAME,false
-frame-cinelog35,Cinelog35 V2 Freestyle CineWhoop Frame,GepRC,Cinelog35 V2,116,FRAME,FRAME,false
-frame-apex5,Apex 5" Freestyle Frame,ImpulseRC,Apex 5,125,FRAME,FRAME,false
-frame-bee35,SpeedyBee Bee35 CineWhoop Frame,SpeedyBee,Bee35,138,FRAME,FRAME,false
-frame-nazgul5,Nazgul Evoque F5D DeadCat Frame,iFlight,Nazgul Evoque F5D,150,FRAME,FRAME,false
-frame-flywoo4,Explorer LR 4 Frame V2,Flywoo,Explorer LR 4 V2,41,FRAME,FRAME,false
-frame-chimera7,Chimera7 Pro V2 Long Range Frame,iFlight,Chimera7 Pro V2,290,FRAME,FRAME,false
-fc-speedybeef405,SpeedyBee F405 V3 Flight Controller,SpeedyBee,F405 V3,9.6,ELECTRONICS,FC,false
-fc-blitzf7,Blitz F7 V2 Flight Controller,iFlight,Blitz F7 V2,8.5,ELECTRONICS,FC,false
-fc-matekh743,Matek H743-WING V3 Flight Controller,Matek Systems,H743-WING V3,26,ELECTRONICS,FC,false
-fc-kakuteh7,Holybro Kakute H7 V2 Flight Controller,Holybro,Kakute H7 V2,8,ELECTRONICS,FC,false
-esc-speedybee50,SpeedyBee 50A BLHeli_S 4-in-1 ESC,SpeedyBee,50A 4-in-1,15,ELECTRONICS,ESC,false
-esc-blitz55,iFlight Blitz E55S 4-in-1 ESC,iFlight,Blitz E55S,16.5,ELECTRONICS,ESC,false
-esc-tmotor45,T-Motor F45A V2 4-in-1 ESC,T-Motor,F45A V2,18,ELECTRONICS,ESC,false
-esc-tekko65,Holybro Tekko32 F4 4-in-1 65A ESC,Holybro,Tekko32 65A,22,ELECTRONICS,ESC,false
-esc-reaper60,Foxeer Reaper Extreme 60A 4-in-1 ESC,Foxeer,Reaper Extreme 60A,18,ELECTRONICS,ESC,false
-esc-zeus35,HGLRC Zeus 35A 4-in-1 ESC,HGLRC,Zeus 35A,9.8,ELECTRONICS,ESC,false
-aio-superx,HappyModel SuperX HD ELRS 1-2S AIO,HappyModel,SuperX HD ELRS,5.6,ELECTRONICS,AIO,true
-aio-betafpv12,BetaFPV F4 1S 12A Brushless AIO,BetaFPV,F4 1S 12A AIO,4.5,ELECTRONICS,AIO,true
-aio-darwin15,DarwinFPV 15A 1-3S F411 AIO,DarwinFPV,Darwin 15A AIO,5.5,ELECTRONICS,AIO,true
-aio-taker35,GepRC Taker G4 35A AIO V2,GepRC,Taker G4 35A,8.5,ELECTRONICS,AIO,true
-motor-se0802,SE0802 19000KV Brushless Motor,HappyModel,SE0802,1.9,PROPULSION,MOTOR,false
-motor-xing2207-1850,XING2 2207 1850KV Unibell Motor,iFlight,XING2 2207 1850KV,31.6,PROPULSION,MOTOR,false
-motor-xing2207-2750,XING2 2207 2750KV Unibell Motor,iFlight,XING2 2207 2750KV,31.6,PROPULSION,MOTOR,false
-motor-xing1404,XING 1404 4600KV Ultralight Motor,iFlight,XING 1404,9.3,PROPULSION,MOTOR,false
-motor-bh1504,VY 1504.5 3950KV Brushless Motor,BrotherHobby,VY 1504.5,12,PROPULSION,MOTOR,false
-motor-eco2807,ECO II 2807 1300KV Motor,EMAX,ECO II 2807,48,PROPULSION,MOTOR,false
-motor-velox2207,Velox V3 2207 1950KV Motor,T-Motor,Velox V3 2207,32.1,PROPULSION,MOTOR,false
-motor-f40pro,F40 PRO IV 1950KV FPV Motor,T-Motor,F40 PRO IV,30.8,PROPULSION,MOTOR,false
-prop-gemfan1635,Gemfan 1635 40mm 4-Blade Propellers (Set of 4),Gemfan,1635-4,0.5,PROPULSION,PROPELLER,false
-prop-gemfan51433,Gemfan Hurricane 51433 3-Blade Propeller,Gemfan,Hurricane 51433,3.8,PROPULSION,PROPELLER,false
-prop-ethixs3,HQProp Ethix S3 Watermelon 5x3.1x3 Propeller,HQProp,Ethix S3,3.6,PROPULSION,PROPELLER,false
-prop-hq3.5,HQProp T3.5x2.5x3 3-Blade Propeller,HQProp,T3.5x2.5x3,1.5,PROPULSION,PROPELLER,false
-prop-gemfan3018,Gemfan Hurricane 3018 2-Blade Propeller,Gemfan,Hurricane 3018,0.8,PROPULSION,PROPELLER,false
-prop-hq7,HQProp 7x3.5x3 3-Blade Propeller,HQProp,7x3.5x3,8.5,PROPULSION,PROPELLER,false
-bat-tattu1300-6s,Tattu R-Line Version 5.0 6S 1300mAh 150C LiPo,Tattu,R-Line V5 6S 1300mAh,220,PROPULSION,BATTERY,false
-bat-gnb450-1s,GNB 1S 450mAh 100C 3.8V LiHv,GNB,GNB 1S 450mAh LiHv,13,PROPULSION,BATTERY,false
-bat-tattu850-4s,Tattu R-Line 4S 850mAh 95C LiPo,Tattu,R-Line 4S 850mAh,102,PROPULSION,BATTERY,false
-bat-aulink4000-6s,Aulink 6S 4000mAh 10C 18650 LiIon Pack,Aulink,6S 4000mAh LiIon,300,PROPULSION,BATTERY,false
-bat-cnhl1500-4s,CNHL Black Series 4S 1500mAh 100C LiPo,CNHL,Black Series 4S 1500mAh,185,PROPULSION,BATTERY,false
-bat-gnb650-2s,GNB 2S 650mAh 90C LiPo,GNB,GNB 2S 650mAh,36,PROPULSION,BATTERY,false
-vtx-djio3,DJI O3 Air Unit VTX,DJI,O3 Air Unit,39,ELECTRONICS,VTX,false
-vtx-walksnail,Walksnail Avatar V2 VTX,Caddx,Avatar V2 VTX,18,ELECTRONICS,VTX,false
-vtx-hdzerolite,HDZero Whoop Lite VTX,Divimath,HDZero Whoop Lite,4.5,ELECTRONICS,VTX,false
-vtx-tbsunify,TBS Unify Pro32 Nano 5G8 (Analog),TBS,Unify Pro32 Nano,1,ELECTRONICS,VTX,false
-rx-ep1,HappyModel EP1 RX ELRS 2.4GHz Receiver,HappyModel,EP1 RX,0.4,ELECTRONICS,RC_RECEIVER,false
-rx-crossfire,TBS Crossfire Nano RX,TBS,Crossfire Nano RX,0.5,ELECTRONICS,RC_RECEIVER,false
-rx-elrslite,BetaFPV ELRS Lite RX (Flat Ceramic Antenna),BetaFPV,ELRS Lite RX,0.4,ELECTRONICS,RC_RECEIVER,false
-rx-xmplus,FrSky XM+ SBUS Mini Receiver,FrSky,XM+ SBUS,1.6,ELECTRONICS,RC_RECEIVER,false
-gps-goku10,GOKU GM10 Nano V3 GPS,Flywoo,GM10 Nano GPS,2.2,ELECTRONICS,GPS,false
-gps-matekm10,Matek M10-5883 GPS & Compass Module,Matek Systems,M10-5883,7.5,ELECTRONICS,GPS,false
-cam-phoenix2,RunCam Phoenix 2 JB Edition FPV Camera,RunCam,Phoenix 2 JB,9,ELECTRONICS,CAMERA,false
-cam-ratel2,Caddx Ratel 2 Micro Starlight FPV Camera,Caddx,Ratel 2,6,ELECTRONICS,CAMERA,false
-strap-flywoo,Flywoo Lipo Strap 15x250mm (Kevlar),Flywoo,Battery Strap 250mm,4.5,ACCESSORIES,BATTERY_STRAP,false
-ant-foxeer,Foxeer Lollipop 4 5.8G SMA Antenna,Foxeer,Lollipop 4 SMA,8.2,ELECTRONICS,ANTENNA,false
-frame-aether-archetype,Aether Archetype 4" Frame,Aether FPV,Archetype 4",150,FRAME,FRAME,false
-fc-hdzero-halo-h7,HDZero Halo H7 s ELRS Flight Controller,HDZero,Halo H7 FC,5.6,ELECTRONICS,FC,false
-esc-hdzero-halo-70a,HDZero Halo 70A 8S AM32 ESC,HDZero,Halo 70A ESC,7.8,ELECTRONICS,ESC,false
-motor-gts2105-2950,RCinpower GTS V3 2105 Plus 2950Kv Motor,RCinpower,GTS V3 2105 Plus 2950Kv,21,PROPULSION,MOTOR,false
-motor-gts2105-1850,RCinpower GTS V3 2105 Plus 1850Kv Motor,RCinpower,GTS V3 2105 Plus 1850Kv,20,PROPULSION,MOTOR,false
-rx-flywoo-el24p,Flywoo ELRS 2.4G EL24P TCXO Receiver,Flywoo,EL24P TCXO,0.44,ELECTRONICS,RC_RECEIVER,false
-prop-gemfan4525,Gemfan Hurricane 4525 3-Blade Propeller,Gemfan,Hurricane 4525-3,2.22,PROPULSION,PROPELLER,false
-prop-gemfan4023,Gemfan Hurricane 4023 3-Blade Propeller,Gemfan,Hurricane 4023-3,1.98,PROPULSION,PROPELLER,false
-prop-hq4030,HQProp 4x3x3 V2 3-Blade Propeller,HQProp,4x3x3 V2,2.2,PROPULSION,PROPELLER,false
-prop-hq4025,HQProp 4x2.5x3 V2S Durable 3-Blade Propeller,HQProp,4x2.5x3 V2S,2.1,PROPULSION,PROPELLER,false
-prop-gemfan4032,Gemfan Windancer 4032 3-Blade Propeller,Gemfan,Windancer 4032-3,3.12,PROPULSION,PROPELLER,false
-vtx-flywoo-o4-wide,Flywoo DJI O4 Wide Air Unit VTX,Flywoo,DJI O4 Wide,21.5,ELECTRONICS,VTX,false
-gps-hglrc-m100pro,HGLRC M100 Pro GPS & Compass Module,HGLRC,M100 Pro,7.9,ELECTRONICS,GPS,false
-buzzer-flywoo-finder,Flywoo Finder V1.0 Buzzer,Flywoo,Finder V1.0,2.7,ACCESSORIES,BUZZER,false
-bat-cnhl1100-4s,CNHL Black Series 4S 1100mAh 130C LiPo,CNHL,Black Series 4S 1100mAh,140,PROPULSION,BATTERY,false
+id,name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite,attributes,integratedPartIds
+frame-mob7,Mobula7 V2 75mm Brushless Whoop Frame,HappyModel,Mobula7 V2,5.5,FRAME,FRAME,false,"{""wheelbaseMm"":75,""armThicknessMm"":1,""maxPropSizeInch"":1.6,""fcMountingPattern"":[""25.5x25.5""],""motorMountingPattern"":[""three-hole-6.6mm""],""vtxMountingPattern"":[],""stackHeightMaxMm"":15,""topPlatePresent"":false}","[]"
+frame-cinelog35,Cinelog35 V2 Freestyle CineWhoop Frame,GepRC,Cinelog35 V2,116,FRAME,FRAME,false,"{""wheelbaseMm"":142,""armThicknessMm"":3.5,""maxPropSizeInch"":3.5,""fcMountingPattern"":[""20x20"",""25.5x25.5""],""motorMountingPattern"":[""12x12""],""vtxMountingPattern"":[""20x20"",""25.5x25.5""],""stackHeightMaxMm"":28,""topPlatePresent"":true}","[]"
+frame-apex5,Apex 5" Freestyle Frame,ImpulseRC,Apex 5,125,FRAME,FRAME,false,"{""wheelbaseMm"":225,""armThicknessMm"":5.5,""maxPropSizeInch"":5.1,""fcMountingPattern"":[""20x20"",""30.5x30.5""],""motorMountingPattern"":[""16x16""],""vtxMountingPattern"":[""20x20"",""30.5x30.5""],""stackHeightMaxMm"":25,""topPlatePresent"":true}","[]"
+frame-bee35,SpeedyBee Bee35 CineWhoop Frame,SpeedyBee,Bee35,138,FRAME,FRAME,false,"{""wheelbaseMm"":153,""armThicknessMm"":3,""maxPropSizeInch"":3.5,""fcMountingPattern"":[""20x20"",""25.5x25.5"",""30.5x30.5""],""motorMountingPattern"":[""12x12""],""vtxMountingPattern"":[""20x20"",""25.5x25.5""],""stackHeightMaxMm"":26,""topPlatePresent"":true}","[]"
+frame-nazgul5,Nazgul Evoque F5D DeadCat Frame,iFlight,Nazgul Evoque F5D,150,FRAME,FRAME,false,"{""wheelbaseMm"":223,""armThicknessMm"":6,""maxPropSizeInch"":5.1,""fcMountingPattern"":[""20x20"",""30.5x30.5""],""motorMountingPattern"":[""16x16""],""vtxMountingPattern"":[""20x20"",""25.5x25.5""],""stackHeightMaxMm"":22,""topPlatePresent"":true}","[]"
+frame-flywoo4,Explorer LR 4 Frame V2,Flywoo,Explorer LR 4 V2,41,FRAME,FRAME,false,"{""wheelbaseMm"":168,""armThicknessMm"":3,""maxPropSizeInch"":4,""fcMountingPattern"":[""16x16"",""20x20""],""motorMountingPattern"":[""9x9"",""12x12""],""vtxMountingPattern"":[""20x20""],""stackHeightMaxMm"":20,""topPlatePresent"":true}","[]"
+frame-chimera7,Chimera7 Pro V2 Long Range Frame,iFlight,Chimera7 Pro V2,290,FRAME,FRAME,false,"{""wheelbaseMm"":320,""armThicknessMm"":6,""maxPropSizeInch"":7.5,""fcMountingPattern"":[""30.5x30.5""],""motorMountingPattern"":[""19x19""],""vtxMountingPattern"":[""20x20"",""30.5x30.5""],""stackHeightMaxMm"":29,""topPlatePresent"":true}","[]"
+fc-speedybeef405,SpeedyBee F405 V3 Flight Controller,SpeedyBee,F405 V3,9.6,ELECTRONICS,FC,false,"{""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":6,""firmware"":""Betaflight"",""gyro"":""BMI270"",""mcu"":""F4"",""uartCount"":6,""hasBarometer"":true,""hasBluetooth"":true,""hasBec"":true}","[]"
+fc-blitzf7,Blitz F7 V2 Flight Controller,iFlight,Blitz F7 V2,8.5,ELECTRONICS,FC,false,"{""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":8,""firmware"":""Betaflight"",""gyro"":""ICM-42688-P"",""mcu"":""F7"",""uartCount"":6,""hasBarometer"":true,""hasBluetooth"":false,""hasBec"":true}","[]"
+fc-matekh743,Matek H743-WING V3 Flight Controller,Matek Systems,H743-WING V3,26,ELECTRONICS,FC,false,"{""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":8,""firmware"":""iNav"",""gyro"":""ICM-42688-P"",""mcu"":""H7"",""uartCount"":8,""hasBarometer"":true,""hasBluetooth"":false,""hasBec"":true}","[]"
+fc-kakuteh7,Holybro Kakute H7 V2 Flight Controller,Holybro,Kakute H7 V2,8,ELECTRONICS,FC,false,"{""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":6,""firmware"":""Betaflight"",""gyro"":""BMI270"",""mcu"":""H7"",""uartCount"":6,""hasBarometer"":true,""hasBluetooth"":true,""hasBec"":true}","[]"
+esc-speedybee50,SpeedyBee 50A BLHeli_S 4-in-1 ESC,SpeedyBee,50A 4-in-1,15,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":50,""burstCurrentAmps"":60,""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":6,""firmware"":""BLHeli_S"",""motorOutputCount"":4,""hasTelemetry"":false}","[]"
+esc-blitz55,iFlight Blitz E55S 4-in-1 ESC,iFlight,Blitz E55S,16.5,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":55,""burstCurrentAmps"":65,""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":6,""firmware"":""BLHeli_32"",""motorOutputCount"":4,""hasTelemetry"":true}","[]"
+esc-tmotor45,T-Motor F45A V2 4-in-1 ESC,T-Motor,F45A V2,18,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":45,""burstCurrentAmps"":55,""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":6,""firmware"":""BLHeli_32"",""motorOutputCount"":4,""hasTelemetry"":true}","[]"
+esc-tekko65,Holybro Tekko32 F4 4-in-1 65A ESC,Holybro,Tekko32 65A,22,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":65,""burstCurrentAmps"":80,""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":6,""firmware"":""BLHeli_32"",""motorOutputCount"":4,""hasTelemetry"":true}","[]"
+esc-reaper60,Foxeer Reaper Extreme 60A 4-in-1 ESC,Foxeer,Reaper Extreme 60A,18,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":60,""burstCurrentAmps"":70,""mountingPattern"":""30.5x30.5"",""inputVoltagesMax"":8,""firmware"":""AM32"",""motorOutputCount"":4,""hasTelemetry"":true}","[]"
+esc-zeus35,HGLRC Zeus 35A 4-in-1 ESC,HGLRC,Zeus 35A,9.8,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":35,""burstCurrentAmps"":40,""mountingPattern"":""20x20"",""inputVoltagesMax"":6,""firmware"":""BLHeli_S"",""motorOutputCount"":4,""hasTelemetry"":false}","[]"
+aio-superx,HappyModel SuperX HD ELRS 1-2S AIO,HappyModel,SuperX HD ELRS,5.6,ELECTRONICS,AIO,true,"{""mountingPattern"":""25.5x25.5"",""inputVoltagesMax"":2,""firmware"":""Betaflight"",""gyro"":""ICM-42688-P"",""mcu"":""F4"",""uartCount"":2,""hasBarometer"":false,""hasBluetooth"":false,""continuousCurrentAmps"":12,""burstCurrentAmps"":15,""escFirmware"":""Bluejay"",""motorOutputCount"":4,""hasTelemetry"":false,""hasBec"":true}","[]"
+aio-betafpv12,BetaFPV F4 1S 12A Brushless AIO,BetaFPV,F4 1S 12A AIO,4.5,ELECTRONICS,AIO,true,"{""mountingPattern"":""25.5x25.5"",""inputVoltagesMax"":1,""firmware"":""Betaflight"",""gyro"":""BMI270"",""mcu"":""F4"",""uartCount"":2,""hasBarometer"":false,""hasBluetooth"":false,""continuousCurrentAmps"":12,""burstCurrentAmps"":15,""escFirmware"":""Bluejay"",""motorOutputCount"":4,""hasTelemetry"":false,""hasBec"":true}","[]"
+aio-darwin15,DarwinFPV 15A 1-3S F411 AIO,DarwinFPV,Darwin 15A AIO,5.5,ELECTRONICS,AIO,true,"{""mountingPattern"":""25.5x25.5"",""inputVoltagesMax"":3,""firmware"":""Betaflight"",""gyro"":""BMI270"",""mcu"":""F4"",""uartCount"":2,""hasBarometer"":false,""hasBluetooth"":false,""continuousCurrentAmps"":15,""burstCurrentAmps"":18,""escFirmware"":""BLHeli_S"",""motorOutputCount"":4,""hasTelemetry"":false,""hasBec"":true}","[]"
+aio-taker35,GepRC Taker G4 35A AIO V2,GepRC,Taker G4 35A,8.5,ELECTRONICS,AIO,true,"{""mountingPattern"":""25.5x25.5"",""inputVoltagesMax"":6,""firmware"":""Betaflight"",""gyro"":""ICM-42688-P"",""mcu"":""F4"",""uartCount"":4,""hasBarometer"":true,""hasBluetooth"":false,""continuousCurrentAmps"":35,""burstCurrentAmps"":40,""escFirmware"":""Bluejay"",""motorOutputCount"":4,""hasTelemetry"":true,""hasBec"":true}","[]"
+motor-se0802,SE0802 19000KV Brushless Motor,HappyModel,SE0802,1.9,PROPULSION,MOTOR,false,"{""kv"":19000,""statorDiameterMm"":8,""statorHeightMm"":2,""mountingPattern"":""three-hole-6.6mm"",""propMountingPattern"":[""1.5mm""],""inputVoltageMax"":4.35,""maxCurrentDraw"":6}","[]"
+motor-xing2207-1850,XING2 2207 1850KV Unibell Motor,iFlight,XING2 2207 1850KV,31.6,PROPULSION,MOTOR,false,"{""kv"":1850,""statorDiameterMm"":22,""statorHeightMm"":7,""mountingPattern"":""16x16"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":25.2,""maxCurrentDraw"":45}","[]"
+motor-xing2207-2750,XING2 2207 2750KV Unibell Motor,iFlight,XING2 2207 2750KV,31.6,PROPULSION,MOTOR,false,"{""kv"":2750,""statorDiameterMm"":22,""statorHeightMm"":7,""mountingPattern"":""16x16"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":16.8,""maxCurrentDraw"":52}","[]"
+motor-xing1404,XING 1404 4600KV Ultralight Motor,iFlight,XING 1404,9.3,PROPULSION,MOTOR,false,"{""kv"":4600,""statorDiameterMm"":14,""statorHeightMm"":4,""mountingPattern"":""9x9"",""propMountingPattern"":[""1.5mm""],""inputVoltageMax"":16.8,""maxCurrentDraw"":18}","[]"
+motor-bh1504,VY 1504.5 3950KV Brushless Motor,BrotherHobby,VY 1504.5,12,PROPULSION,MOTOR,false,"{""kv"":3950,""statorDiameterMm"":15,""statorHeightMm"":4.5,""mountingPattern"":""12x12"",""propMountingPattern"":[""1.5mm"",""5mm""],""inputVoltageMax"":16.8,""maxCurrentDraw"":22}","[]"
+motor-eco2807,ECO II 2807 1300KV Motor,EMAX,ECO II 2807,48,PROPULSION,MOTOR,false,"{""kv"":1300,""statorDiameterMm"":28,""statorHeightMm"":7,""mountingPattern"":""19x19"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":25.2,""maxCurrentDraw"":55}","[]"
+motor-velox2207,Velox V3 2207 1950KV Motor,T-Motor,Velox V3 2207,32.1,PROPULSION,MOTOR,false,"{""kv"":1950,""statorDiameterMm"":22,""statorHeightMm"":7,""mountingPattern"":""16x16"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":25.2,""maxCurrentDraw"":48}","[]"
+motor-f40pro,F40 PRO IV 1950KV FPV Motor,T-Motor,F40 PRO IV,30.8,PROPULSION,MOTOR,false,"{""kv"":1950,""statorDiameterMm"":22,""statorHeightMm"":7,""mountingPattern"":""16x16"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":25.2,""maxCurrentDraw"":51}","[]"
+prop-gemfan1635,Gemfan 1635 40mm 4-Blade Propellers (Set of 4),Gemfan,1635-4,0.5,PROPULSION,PROPELLER,false,"{""diameterInch"":1.6,""pitchInch"":1.5,""mountingPattern"":[""1.5mm""],""blades"":4}","[]"
+prop-gemfan51433,Gemfan Hurricane 51433 3-Blade Propeller,Gemfan,Hurricane 51433,3.8,PROPULSION,PROPELLER,false,"{""diameterInch"":5.1,""pitchInch"":4.3,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+prop-ethixs3,HQProp Ethix S3 Watermelon 5x3.1x3 Propeller,HQProp,Ethix S3,3.6,PROPULSION,PROPELLER,false,"{""diameterInch"":5,""pitchInch"":3.1,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+prop-hq3.5,HQProp T3.5x2.5x3 3-Blade Propeller,HQProp,T3.5x2.5x3,1.5,PROPULSION,PROPELLER,false,"{""diameterInch"":3.5,""pitchInch"":2.5,""mountingPattern"":[""5mm"",""1.5mm""],""blades"":3}","[]"
+prop-gemfan3018,Gemfan Hurricane 3018 2-Blade Propeller,Gemfan,Hurricane 3018,0.8,PROPULSION,PROPELLER,false,"{""diameterInch"":3,""pitchInch"":1.8,""mountingPattern"":[""1.5mm""],""blades"":2}","[]"
+prop-hq7,HQProp 7x3.5x3 3-Blade Propeller,HQProp,7x3.5x3,8.5,PROPULSION,PROPELLER,false,"{""diameterInch"":7,""pitchInch"":3.5,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+bat-tattu1300-6s,Tattu R-Line Version 5.0 6S 1300mAh 150C LiPo,Tattu,R-Line V5 6S 1300mAh,220,PROPULSION,BATTERY,false,"{""cellCount"":6,""capacityMah"":1300,""cRating"":150,""chemistry"":""LiPo""}","[]"
+bat-gnb450-1s,GNB 1S 450mAh 100C 3.8V LiHv,GNB,GNB 1S 450mAh LiHv,13,PROPULSION,BATTERY,false,"{""cellCount"":1,""capacityMah"":450,""cRating"":100,""chemistry"":""LiHv""}","[]"
+bat-tattu850-4s,Tattu R-Line 4S 850mAh 95C LiPo,Tattu,R-Line 4S 850mAh,102,PROPULSION,BATTERY,false,"{""cellCount"":4,""capacityMah"":850,""cRating"":95,""chemistry"":""LiPo""}","[]"
+bat-aulink4000-6s,Aulink 6S 4000mAh 10C 18650 LiIon Pack,Aulink,6S 4000mAh LiIon,300,PROPULSION,BATTERY,false,"{""cellCount"":6,""capacityMah"":4000,""cRating"":10,""chemistry"":""LiIon""}","[]"
+bat-cnhl1500-4s,CNHL Black Series 4S 1500mAh 100C LiPo,CNHL,Black Series 4S 1500mAh,185,PROPULSION,BATTERY,false,"{""cellCount"":4,""capacityMah"":1500,""cRating"":100,""chemistry"":""LiPo""}","[]"
+bat-gnb650-2s,GNB 2S 650mAh 90C LiPo,GNB,GNB 2S 650mAh,36,PROPULSION,BATTERY,false,"{""cellCount"":2,""capacityMah"":650,""cRating"":90,""chemistry"":""LiPo""}","[]"
+vtx-djio3,DJI O3 Air Unit VTX,DJI,O3 Air Unit,39,ELECTRONICS,VTX,false,"{""inputVoltageMin"":7.4,""inputVoltageMax"":26.4,""mountingPattern"":[""20x20""],""maxPowerMw"":1000,""protocol"":""DJI O3""}","[]"
+vtx-walksnail,Walksnail Avatar V2 VTX,Caddx,Avatar V2 VTX,18,ELECTRONICS,VTX,false,"{""inputVoltageMin"":6,""inputVoltageMax"":25.2,""mountingPattern"":[""20x20"",""25.5x25.5""],""maxPowerMw"":1200,""protocol"":""Avatar""}","[]"
+vtx-hdzerolite,HDZero Whoop Lite VTX,Divimath,HDZero Whoop Lite,4.5,ELECTRONICS,VTX,false,"{""inputVoltageMin"":3.3,""inputVoltageMax"":5.5,""mountingPattern"":[""25.5x25.5""],""maxPowerMw"":200,""protocol"":""HDZero""}","[]"
+vtx-tbsunify,TBS Unify Pro32 Nano 5G8 (Analog),TBS,Unify Pro32 Nano,1,ELECTRONICS,VTX,false,"{""inputVoltageMin"":3,""inputVoltageMax"":13,""mountingPattern"":[],""maxPowerMw"":500,""protocol"":""Analog""}","[]"
+rx-ep1,HappyModel EP1 RX ELRS 2.4GHz Receiver,HappyModel,EP1 RX,0.4,ELECTRONICS,RC_RECEIVER,false,"{}","[]"
+rx-crossfire,TBS Crossfire Nano RX,TBS,Crossfire Nano RX,0.5,ELECTRONICS,RC_RECEIVER,false,"{}","[]"
+rx-elrslite,BetaFPV ELRS Lite RX (Flat Ceramic Antenna),BetaFPV,ELRS Lite RX,0.4,ELECTRONICS,RC_RECEIVER,false,"{}","[]"
+rx-xmplus,FrSky XM+ SBUS Mini Receiver,FrSky,XM+ SBUS,1.6,ELECTRONICS,RC_RECEIVER,false,"{}","[]"
+gps-goku10,GOKU GM10 Nano V3 GPS,Flywoo,GM10 Nano GPS,2.2,ELECTRONICS,GPS,false,"{}","[]"
+gps-matekm10,Matek M10-5883 GPS & Compass Module,Matek Systems,M10-5883,7.5,ELECTRONICS,GPS,false,"{}","[]"
+cam-phoenix2,RunCam Phoenix 2 JB Edition FPV Camera,RunCam,Phoenix 2 JB,9,ELECTRONICS,CAMERA,false,"{}","[]"
+cam-ratel2,Caddx Ratel 2 Micro Starlight FPV Camera,Caddx,Ratel 2,6,ELECTRONICS,CAMERA,false,"{}","[]"
+strap-flywoo,Flywoo Lipo Strap 15x250mm (Kevlar),Flywoo,Battery Strap 250mm,4.5,ACCESSORIES,BATTERY_STRAP,false,"{}","[]"
+ant-foxeer,Foxeer Lollipop 4 5.8G SMA Antenna,Foxeer,Lollipop 4 SMA,8.2,ELECTRONICS,ANTENNA,false,"{}","[]"
+frame-aether-archetype,Aether Archetype 4" Frame,Aether FPV,Archetype 4",150,FRAME,FRAME,false,"{""wheelbaseMm"":198,""armThicknessMm"":5,""maxPropSizeInch"":4.5,""fcMountingPattern"":[""20x20"",""30.5x30.5""],""motorMountingPattern"":[""12x12""],""vtxMountingPattern"":[""20x20"",""25.5x25.5""],""stackHeightMaxMm"":25,""topPlatePresent"":true}","[]"
+fc-hdzero-halo-h7,HDZero Halo H7 s ELRS Flight Controller,HDZero,Halo H7 FC,5.6,ELECTRONICS,FC,false,"{""mountingPattern"":""20x20"",""inputVoltagesMax"":8,""firmware"":""Betaflight"",""gyro"":""ICM-42688-P"",""mcu"":""H7"",""uartCount"":6,""hasBarometer"":true,""hasBluetooth"":false,""hasBec"":true}","[]"
+esc-hdzero-halo-70a,HDZero Halo 70A 8S AM32 ESC,HDZero,Halo 70A ESC,7.8,ELECTRONICS,ESC,false,"{""continuousCurrentAmps"":70,""burstCurrentAmps"":100,""mountingPattern"":""20x20"",""inputVoltagesMax"":40,""firmware"":""AM32"",""motorOutputCount"":4,""hasTelemetry"":true}","[]"
+motor-gts2105-2950,RCinpower GTS V3 2105 Plus 2950Kv Motor,RCinpower,GTS V3 2105 Plus 2950Kv,21,PROPULSION,MOTOR,false,"{""kv"":2950,""statorDiameterMm"":21,""statorHeightMm"":5.5,""mountingPattern"":""12x12"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":16.8,""maxCurrentDraw"":25}","[]"
+motor-gts2105-1850,RCinpower GTS V3 2105 Plus 1850Kv Motor,RCinpower,GTS V3 2105 Plus 1850Kv,20,PROPULSION,MOTOR,false,"{""kv"":1850,""statorDiameterMm"":21,""statorHeightMm"":5.5,""mountingPattern"":""12x12"",""propMountingPattern"":[""5mm""],""inputVoltageMax"":25.2,""maxCurrentDraw"":12}","[]"
+rx-flywoo-el24p,Flywoo ELRS 2.4G EL24P TCXO Receiver,Flywoo,EL24P TCXO,0.44,ELECTRONICS,RC_RECEIVER,false,"{}","[]"
+prop-gemfan4525,Gemfan Hurricane 4525 3-Blade Propeller,Gemfan,Hurricane 4525-3,2.22,PROPULSION,PROPELLER,false,"{""diameterInch"":4.5,""pitchInch"":2.5,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+prop-gemfan4023,Gemfan Hurricane 4023 3-Blade Propeller,Gemfan,Hurricane 4023-3,1.98,PROPULSION,PROPELLER,false,"{""diameterInch"":4,""pitchInch"":2.3,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+prop-hq4030,HQProp 4x3x3 V2 3-Blade Propeller,HQProp,4x3x3 V2,2.2,PROPULSION,PROPELLER,false,"{""diameterInch"":4,""pitchInch"":3,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+prop-hq4025,HQProp 4x2.5x3 V2S Durable 3-Blade Propeller,HQProp,4x2.5x3 V2S,2.1,PROPULSION,PROPELLER,false,"{""diameterInch"":4,""pitchInch"":2.5,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+prop-gemfan4032,Gemfan Windancer 4032 3-Blade Propeller,Gemfan,Windancer 4032-3,3.12,PROPULSION,PROPELLER,false,"{""diameterInch"":4,""pitchInch"":3.2,""mountingPattern"":[""5mm""],""blades"":3}","[]"
+vtx-flywoo-o4-wide,Flywoo DJI O4 Wide Air Unit VTX,Flywoo,DJI O4 Wide,21.5,ELECTRONICS,VTX,false,"{""inputVoltageMin"":3.7,""inputVoltageMax"":13.2,""mountingPattern"":[""20x20"",""25.5x25.5""],""maxPowerMw"":1000,""protocol"":""DJI O4""}","[]"
+gps-hglrc-m100pro,HGLRC M100 Pro GPS & Compass Module,HGLRC,M100 Pro,7.9,ELECTRONICS,GPS,false,"{}","[]"
+buzzer-flywoo-finder,Flywoo Finder V1.0 Buzzer,Flywoo,Finder V1.0,2.7,ACCESSORIES,BUZZER,false,"{}","[]"
+bat-cnhl1100-4s,CNHL Black Series 4S 1100mAh 130C LiPo,CNHL,Black Series 4S 1100mAh,140,PROPULSION,BATTERY,false,"{""cellCount"":4,""capacityMah"":1100,""cRating"":130,""chemistry"":""LiPo""}","[]"
