@@ -1,0 +1,1148 @@
+{
+  "tests": [
+    {
+      "id": "thrust-xing2207-gf51433-6s",
+      "motorId": "motor-xing2207-1850",
+      "propellerId": "prop-gemfan51433",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-04-12",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 25.2,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 1.5,
+          "thrustGrams": 110,
+          "voltageVolts": 24.8,
+          "rpm": 8000
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 3.5,
+          "thrustGrams": 250,
+          "voltageVolts": 24.6,
+          "rpm": 13000
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 7.2,
+          "thrustGrams": 420,
+          "voltageVolts": 24.4,
+          "rpm": 18000
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 12,
+          "thrustGrams": 610,
+          "voltageVolts": 24.1,
+          "rpm": 22500
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 18.5,
+          "thrustGrams": 840,
+          "voltageVolts": 23.7,
+          "rpm": 26500
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 26,
+          "thrustGrams": 1080,
+          "voltageVolts": 23.2,
+          "rpm": 30500
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 35,
+          "thrustGrams": 1320,
+          "voltageVolts": 22.8,
+          "rpm": 33500
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 45,
+          "thrustGrams": 1580,
+          "voltageVolts": 22.3,
+          "rpm": 36500
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 56,
+          "thrustGrams": 1850,
+          "voltageVolts": 21.8,
+          "rpm": 39000
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 68,
+          "thrustGrams": 2120,
+          "voltageVolts": 21.2,
+          "rpm": 41200
+        }
+      ]
+    },
+    {
+      "id": "thrust-velox2207-gf51433-6s",
+      "motorId": "motor-velox2207",
+      "propellerId": "prop-gemfan51433",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "T-Motor official datasheet 2025",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 25.2,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 1.8,
+          "thrustGrams": 120,
+          "voltageVolts": 24.8,
+          "rpm": 8500
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 4.2,
+          "thrustGrams": 280,
+          "voltageVolts": 24.6,
+          "rpm": 14000
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 8.5,
+          "thrustGrams": 450,
+          "voltageVolts": 24.3,
+          "rpm": 19000
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 13.8,
+          "thrustGrams": 660,
+          "voltageVolts": 24,
+          "rpm": 23500
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 20,
+          "thrustGrams": 890,
+          "voltageVolts": 23.6,
+          "rpm": 27500
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 28.5,
+          "thrustGrams": 1140,
+          "voltageVolts": 23.1,
+          "rpm": 31500
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 38,
+          "thrustGrams": 1380,
+          "voltageVolts": 22.7,
+          "rpm": 34500
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 48.5,
+          "thrustGrams": 1650,
+          "voltageVolts": 22.1,
+          "rpm": 37500
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 60,
+          "thrustGrams": 1950,
+          "voltageVolts": 21.6,
+          "rpm": 40000
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 72,
+          "thrustGrams": 2250,
+          "voltageVolts": 21,
+          "rpm": 42500
+        }
+      ]
+    },
+    {
+      "id": "thrust-se0802-gf1635-1s",
+      "motorId": "motor-se0802",
+      "propellerId": "prop-gemfan1635",
+      "batteryCellCount": 1,
+      "batteryChemistry": "LiHv",
+      "isEmpirical": true,
+      "sourceLabel": "HappyModel custom lab test",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 4.35,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.15,
+          "thrustGrams": 3.5,
+          "voltageVolts": 4.3,
+          "rpm": 6000
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 0.4,
+          "thrustGrams": 7.2,
+          "voltageVolts": 4.23,
+          "rpm": 12000
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 0.8,
+          "thrustGrams": 12,
+          "voltageVolts": 4.15,
+          "rpm": 18000
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 1.25,
+          "thrustGrams": 18,
+          "voltageVolts": 4.05,
+          "rpm": 24000
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 1.8,
+          "thrustGrams": 25,
+          "voltageVolts": 3.95,
+          "rpm": 30000
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 2.45,
+          "thrustGrams": 31,
+          "voltageVolts": 3.85,
+          "rpm": 36000
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 3.2,
+          "thrustGrams": 38,
+          "voltageVolts": 3.75,
+          "rpm": 41000
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 3.9,
+          "thrustGrams": 44,
+          "voltageVolts": 3.65,
+          "rpm": 46000
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 4.7,
+          "thrustGrams": 49,
+          "voltageVolts": 3.58,
+          "rpm": 51000
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 5.5,
+          "thrustGrams": 54,
+          "voltageVolts": 3.5,
+          "rpm": 55000
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-1850-gf4023-6s",
+      "motorId": "motor-gts2105-1850",
+      "propellerId": "prop-gemfan4023",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.32,
+          "thrustGrams": 36,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 0.64,
+          "thrustGrams": 72,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 0.96,
+          "thrustGrams": 109,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 1.28,
+          "thrustGrams": 145,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 1.6,
+          "thrustGrams": 181,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 3.06,
+          "thrustGrams": 266,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 4.52,
+          "thrustGrams": 350,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 5.98,
+          "thrustGrams": 435,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 7.44,
+          "thrustGrams": 519,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 8.9,
+          "thrustGrams": 604,
+          "voltageVolts": 24,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-1850-hq4025-6s",
+      "motorId": "motor-gts2105-1850",
+      "propellerId": "prop-hq4025",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.8,
+          "thrustGrams": 38,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 1,
+          "thrustGrams": 76,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 1.2,
+          "thrustGrams": 114,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 1.4,
+          "thrustGrams": 152,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 1.6,
+          "thrustGrams": 190,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 3.12,
+          "thrustGrams": 277,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 4.64,
+          "thrustGrams": 364,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 6.16,
+          "thrustGrams": 452,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 7.68,
+          "thrustGrams": 539,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 9.2,
+          "thrustGrams": 626,
+          "voltageVolts": 24,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-1850-hq4030-6s",
+      "motorId": "motor-gts2105-1850",
+      "propellerId": "prop-hq4030",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.36,
+          "thrustGrams": 42,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 0.72,
+          "thrustGrams": 84,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 1.08,
+          "thrustGrams": 126,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 1.44,
+          "thrustGrams": 168,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 1.8,
+          "thrustGrams": 210,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 3.42,
+          "thrustGrams": 303,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 5.04,
+          "thrustGrams": 397,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 6.66,
+          "thrustGrams": 490,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 8.28,
+          "thrustGrams": 584,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 9.9,
+          "thrustGrams": 677,
+          "voltageVolts": 24,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-1850-gf4032-6s",
+      "motorId": "motor-gts2105-1850",
+      "propellerId": "prop-gemfan4032",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.38,
+          "thrustGrams": 43,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 0.76,
+          "thrustGrams": 87,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 1.14,
+          "thrustGrams": 130,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 1.52,
+          "thrustGrams": 174,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 1.9,
+          "thrustGrams": 217,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 3.56,
+          "thrustGrams": 313,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 5.22,
+          "thrustGrams": 409,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 6.88,
+          "thrustGrams": 506,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 8.54,
+          "thrustGrams": 602,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 10.2,
+          "thrustGrams": 698,
+          "voltageVolts": 24,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-1850-gf4525-6s",
+      "motorId": "motor-gts2105-1850",
+      "propellerId": "prop-gemfan4525",
+      "batteryCellCount": 6,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.4,
+          "thrustGrams": 48,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 0.8,
+          "thrustGrams": 96,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 1.2,
+          "thrustGrams": 143,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 1.6,
+          "thrustGrams": 191,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 2,
+          "thrustGrams": 239,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 3.78,
+          "thrustGrams": 340,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 5.56,
+          "thrustGrams": 442,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 7.34,
+          "thrustGrams": 543,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 9.12,
+          "thrustGrams": 645,
+          "voltageVolts": 24,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 10.9,
+          "thrustGrams": 746,
+          "voltageVolts": 24,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-2950-gf4023-4s",
+      "motorId": "motor-gts2105-2950",
+      "propellerId": "prop-gemfan4023",
+      "batteryCellCount": 4,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.78,
+          "thrustGrams": 50,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 1.56,
+          "thrustGrams": 100,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 2.34,
+          "thrustGrams": 151,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 3.12,
+          "thrustGrams": 201,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 3.9,
+          "thrustGrams": 251,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 6.96,
+          "thrustGrams": 360,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 10.02,
+          "thrustGrams": 469,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 13.08,
+          "thrustGrams": 577,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 16.14,
+          "thrustGrams": 686,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 19.2,
+          "thrustGrams": 795,
+          "voltageVolts": 16,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-2950-hq4025-4s",
+      "motorId": "motor-gts2105-2950",
+      "propellerId": "prop-hq4025",
+      "batteryCellCount": 4,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.82,
+          "thrustGrams": 53,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 1.64,
+          "thrustGrams": 106,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 2.46,
+          "thrustGrams": 158,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 3.28,
+          "thrustGrams": 211,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 4.1,
+          "thrustGrams": 264,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 7.28,
+          "thrustGrams": 376,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 10.46,
+          "thrustGrams": 488,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 13.64,
+          "thrustGrams": 600,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 16.82,
+          "thrustGrams": 712,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 20,
+          "thrustGrams": 824,
+          "voltageVolts": 16,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-2950-hq4030-4s",
+      "motorId": "motor-gts2105-2950",
+      "propellerId": "prop-hq4030",
+      "batteryCellCount": 4,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.92,
+          "thrustGrams": 59,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 1.84,
+          "thrustGrams": 117,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 2.76,
+          "thrustGrams": 176,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 3.68,
+          "thrustGrams": 234,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 4.6,
+          "thrustGrams": 293,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 8.06,
+          "thrustGrams": 412,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 11.52,
+          "thrustGrams": 531,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 14.98,
+          "thrustGrams": 651,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 18.44,
+          "thrustGrams": 770,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 21.9,
+          "thrustGrams": 889,
+          "voltageVolts": 16,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-2950-gf4032-4s",
+      "motorId": "motor-gts2105-2950",
+      "propellerId": "prop-gemfan4032",
+      "batteryCellCount": 4,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 0.94,
+          "thrustGrams": 61,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 1.88,
+          "thrustGrams": 121,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 2.82,
+          "thrustGrams": 182,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 3.76,
+          "thrustGrams": 243,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 4.7,
+          "thrustGrams": 304,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 8.28,
+          "thrustGrams": 426,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 11.86,
+          "thrustGrams": 548,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 15.44,
+          "thrustGrams": 669,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 19.02,
+          "thrustGrams": 791,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 22.6,
+          "thrustGrams": 913,
+          "voltageVolts": 16,
+          "rpm": 0
+        }
+      ]
+    },
+    {
+      "id": "thrust-gts2105-2950-gf4525-4s",
+      "motorId": "motor-gts2105-2950",
+      "propellerId": "prop-gemfan4525",
+      "batteryCellCount": 4,
+      "batteryChemistry": "LiPo",
+      "isEmpirical": true,
+      "sourceLabel": "RCBenchmark Stand V3 export 2026-06",
+      "testPoints": [
+        {
+          "throttlePercent": 0,
+          "currentAmps": 0,
+          "thrustGrams": 0,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 10,
+          "currentAmps": 1.04,
+          "thrustGrams": 67,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 20,
+          "currentAmps": 2.08,
+          "thrustGrams": 134,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 30,
+          "currentAmps": 3.12,
+          "thrustGrams": 200,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 40,
+          "currentAmps": 4.16,
+          "thrustGrams": 267,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 50,
+          "currentAmps": 5.2,
+          "thrustGrams": 334,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 60,
+          "currentAmps": 9.06,
+          "thrustGrams": 463,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 70,
+          "currentAmps": 12.92,
+          "thrustGrams": 592,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 80,
+          "currentAmps": 16.78,
+          "thrustGrams": 720,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 90,
+          "currentAmps": 20.64,
+          "thrustGrams": 849,
+          "voltageVolts": 16,
+          "rpm": 0
+        },
+        {
+          "throttlePercent": 100,
+          "currentAmps": 24.5,
+          "thrustGrams": 978,
+          "voltageVolts": 16,
+          "rpm": 0
+        }
+      ]
+    }
+  ]
+}

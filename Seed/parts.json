@@ -1,0 +1,1466 @@
+{
+  "parts": [
+    {
+      "id": "frame-mob7",
+      "name": "Mobula7 V2 75mm Brushless Whoop Frame",
+      "manufacturer": "HappyModel",
+      "model": "Mobula7 V2",
+      "weightGrams": 5.5,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 75,
+        "armThicknessMm": 1,
+        "maxPropSizeInch": 1.6,
+        "fcMountingPattern": [
+          "25.5x25.5"
+        ],
+        "motorMountingPattern": [
+          "three-hole-6.6mm"
+        ],
+        "vtxMountingPattern": [],
+        "stackHeightMaxMm": 15,
+        "topPlatePresent": false
+      }
+    },
+    {
+      "id": "frame-cinelog35",
+      "name": "Cinelog35 V2 Freestyle CineWhoop Frame",
+      "manufacturer": "GepRC",
+      "model": "Cinelog35 V2",
+      "weightGrams": 116,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 142,
+        "armThicknessMm": 3.5,
+        "maxPropSizeInch": 3.5,
+        "fcMountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "motorMountingPattern": [
+          "12x12"
+        ],
+        "vtxMountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "stackHeightMaxMm": 28,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "frame-apex5",
+      "name": "Apex 5\" Freestyle Frame",
+      "manufacturer": "ImpulseRC",
+      "model": "Apex 5",
+      "weightGrams": 125,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 225,
+        "armThicknessMm": 5.5,
+        "maxPropSizeInch": 5.1,
+        "fcMountingPattern": [
+          "20x20",
+          "30.5x30.5"
+        ],
+        "motorMountingPattern": [
+          "16x16"
+        ],
+        "vtxMountingPattern": [
+          "20x20",
+          "30.5x30.5"
+        ],
+        "stackHeightMaxMm": 25,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "frame-bee35",
+      "name": "SpeedyBee Bee35 CineWhoop Frame",
+      "manufacturer": "SpeedyBee",
+      "model": "Bee35",
+      "weightGrams": 138,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 153,
+        "armThicknessMm": 3,
+        "maxPropSizeInch": 3.5,
+        "fcMountingPattern": [
+          "20x20",
+          "25.5x25.5",
+          "30.5x30.5"
+        ],
+        "motorMountingPattern": [
+          "12x12"
+        ],
+        "vtxMountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "stackHeightMaxMm": 26,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "frame-nazgul5",
+      "name": "Nazgul Evoque F5D DeadCat Frame",
+      "manufacturer": "iFlight",
+      "model": "Nazgul Evoque F5D",
+      "weightGrams": 150,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 223,
+        "armThicknessMm": 6,
+        "maxPropSizeInch": 5.1,
+        "fcMountingPattern": [
+          "20x20",
+          "30.5x30.5"
+        ],
+        "motorMountingPattern": [
+          "16x16"
+        ],
+        "vtxMountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "stackHeightMaxMm": 22,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "frame-flywoo4",
+      "name": "Explorer LR 4 Frame V2",
+      "manufacturer": "Flywoo",
+      "model": "Explorer LR 4 V2",
+      "weightGrams": 41,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 168,
+        "armThicknessMm": 3,
+        "maxPropSizeInch": 4,
+        "fcMountingPattern": [
+          "16x16",
+          "20x20"
+        ],
+        "motorMountingPattern": [
+          "9x9",
+          "12x12"
+        ],
+        "vtxMountingPattern": [
+          "20x20"
+        ],
+        "stackHeightMaxMm": 20,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "frame-chimera7",
+      "name": "Chimera7 Pro V2 Long Range Frame",
+      "manufacturer": "iFlight",
+      "model": "Chimera7 Pro V2",
+      "weightGrams": 290,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 320,
+        "armThicknessMm": 6,
+        "maxPropSizeInch": 7.5,
+        "fcMountingPattern": [
+          "30.5x30.5"
+        ],
+        "motorMountingPattern": [
+          "19x19"
+        ],
+        "vtxMountingPattern": [
+          "20x20",
+          "30.5x30.5"
+        ],
+        "stackHeightMaxMm": 29,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "fc-speedybeef405",
+      "name": "SpeedyBee F405 V3 Flight Controller",
+      "manufacturer": "SpeedyBee",
+      "model": "F405 V3",
+      "weightGrams": 9.6,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "FC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 6,
+        "firmware": "Betaflight",
+        "gyro": "BMI270",
+        "mcu": "F4",
+        "uartCount": 6,
+        "hasBarometer": true,
+        "hasBluetooth": true,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "fc-blitzf7",
+      "name": "Blitz F7 V2 Flight Controller",
+      "manufacturer": "iFlight",
+      "model": "Blitz F7 V2",
+      "weightGrams": 8.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "FC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 8,
+        "firmware": "Betaflight",
+        "gyro": "ICM-42688-P",
+        "mcu": "F7",
+        "uartCount": 6,
+        "hasBarometer": true,
+        "hasBluetooth": false,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "fc-matekh743",
+      "name": "Matek H743-WING V3 Flight Controller",
+      "manufacturer": "Matek Systems",
+      "model": "H743-WING V3",
+      "weightGrams": 26,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "FC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 8,
+        "firmware": "iNav",
+        "gyro": "ICM-42688-P",
+        "mcu": "H7",
+        "uartCount": 8,
+        "hasBarometer": true,
+        "hasBluetooth": false,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "fc-kakuteh7",
+      "name": "Holybro Kakute H7 V2 Flight Controller",
+      "manufacturer": "Holybro",
+      "model": "Kakute H7 V2",
+      "weightGrams": 8,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "FC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 6,
+        "firmware": "Betaflight",
+        "gyro": "BMI270",
+        "mcu": "H7",
+        "uartCount": 6,
+        "hasBarometer": true,
+        "hasBluetooth": true,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "esc-speedybee50",
+      "name": "SpeedyBee 50A BLHeli_S 4-in-1 ESC",
+      "manufacturer": "SpeedyBee",
+      "model": "50A 4-in-1",
+      "weightGrams": 15,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 50,
+        "burstCurrentAmps": 60,
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 6,
+        "firmware": "BLHeli_S",
+        "motorOutputCount": 4,
+        "hasTelemetry": false
+      }
+    },
+    {
+      "id": "esc-blitz55",
+      "name": "iFlight Blitz E55S 4-in-1 ESC",
+      "manufacturer": "iFlight",
+      "model": "Blitz E55S",
+      "weightGrams": 16.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 55,
+        "burstCurrentAmps": 65,
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 6,
+        "firmware": "BLHeli_32",
+        "motorOutputCount": 4,
+        "hasTelemetry": true
+      }
+    },
+    {
+      "id": "esc-tmotor45",
+      "name": "T-Motor F45A V2 4-in-1 ESC",
+      "manufacturer": "T-Motor",
+      "model": "F45A V2",
+      "weightGrams": 18,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 45,
+        "burstCurrentAmps": 55,
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 6,
+        "firmware": "BLHeli_32",
+        "motorOutputCount": 4,
+        "hasTelemetry": true
+      }
+    },
+    {
+      "id": "esc-tekko65",
+      "name": "Holybro Tekko32 F4 4-in-1 65A ESC",
+      "manufacturer": "Holybro",
+      "model": "Tekko32 65A",
+      "weightGrams": 22,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 65,
+        "burstCurrentAmps": 80,
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 6,
+        "firmware": "BLHeli_32",
+        "motorOutputCount": 4,
+        "hasTelemetry": true
+      }
+    },
+    {
+      "id": "esc-reaper60",
+      "name": "Foxeer Reaper Extreme 60A 4-in-1 ESC",
+      "manufacturer": "Foxeer",
+      "model": "Reaper Extreme 60A",
+      "weightGrams": 18,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 60,
+        "burstCurrentAmps": 70,
+        "mountingPattern": "30.5x30.5",
+        "inputVoltagesMax": 8,
+        "firmware": "AM32",
+        "motorOutputCount": 4,
+        "hasTelemetry": true
+      }
+    },
+    {
+      "id": "esc-zeus35",
+      "name": "HGLRC Zeus 35A 4-in-1 ESC",
+      "manufacturer": "HGLRC",
+      "model": "Zeus 35A",
+      "weightGrams": 9.8,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 35,
+        "burstCurrentAmps": 40,
+        "mountingPattern": "20x20",
+        "inputVoltagesMax": 6,
+        "firmware": "BLHeli_S",
+        "motorOutputCount": 4,
+        "hasTelemetry": false
+      }
+    },
+    {
+      "id": "aio-superx",
+      "name": "HappyModel SuperX HD ELRS 1-2S AIO",
+      "manufacturer": "HappyModel",
+      "model": "SuperX HD ELRS",
+      "weightGrams": 5.6,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "AIO",
+      "isComposite": true,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "25.5x25.5",
+        "inputVoltagesMax": 2,
+        "firmware": "Betaflight",
+        "gyro": "ICM-42688-P",
+        "mcu": "F4",
+        "uartCount": 2,
+        "hasBarometer": false,
+        "hasBluetooth": false,
+        "continuousCurrentAmps": 12,
+        "burstCurrentAmps": 15,
+        "escFirmware": "Bluejay",
+        "motorOutputCount": 4,
+        "hasTelemetry": false,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "aio-betafpv12",
+      "name": "BetaFPV F4 1S 12A Brushless AIO",
+      "manufacturer": "BetaFPV",
+      "model": "F4 1S 12A AIO",
+      "weightGrams": 4.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "AIO",
+      "isComposite": true,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "25.5x25.5",
+        "inputVoltagesMax": 1,
+        "firmware": "Betaflight",
+        "gyro": "BMI270",
+        "mcu": "F4",
+        "uartCount": 2,
+        "hasBarometer": false,
+        "hasBluetooth": false,
+        "continuousCurrentAmps": 12,
+        "burstCurrentAmps": 15,
+        "escFirmware": "Bluejay",
+        "motorOutputCount": 4,
+        "hasTelemetry": false,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "aio-darwin15",
+      "name": "DarwinFPV 15A 1-3S F411 AIO",
+      "manufacturer": "DarwinFPV",
+      "model": "Darwin 15A AIO",
+      "weightGrams": 5.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "AIO",
+      "isComposite": true,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "25.5x25.5",
+        "inputVoltagesMax": 3,
+        "firmware": "Betaflight",
+        "gyro": "BMI270",
+        "mcu": "F4",
+        "uartCount": 2,
+        "hasBarometer": false,
+        "hasBluetooth": false,
+        "continuousCurrentAmps": 15,
+        "burstCurrentAmps": 18,
+        "escFirmware": "BLHeli_S",
+        "motorOutputCount": 4,
+        "hasTelemetry": false,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "aio-taker35",
+      "name": "GepRC Taker G4 35A AIO V2",
+      "manufacturer": "GepRC",
+      "model": "Taker G4 35A",
+      "weightGrams": 8.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "AIO",
+      "isComposite": true,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "25.5x25.5",
+        "inputVoltagesMax": 6,
+        "firmware": "Betaflight",
+        "gyro": "ICM-42688-P",
+        "mcu": "F4",
+        "uartCount": 4,
+        "hasBarometer": true,
+        "hasBluetooth": false,
+        "continuousCurrentAmps": 35,
+        "burstCurrentAmps": 40,
+        "escFirmware": "Bluejay",
+        "motorOutputCount": 4,
+        "hasTelemetry": true,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "motor-se0802",
+      "name": "SE0802 19000KV Brushless Motor",
+      "manufacturer": "HappyModel",
+      "model": "SE0802",
+      "weightGrams": 1.9,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 19000,
+        "statorDiameterMm": 8,
+        "statorHeightMm": 2,
+        "mountingPattern": "three-hole-6.6mm",
+        "propMountingPattern": [
+          "1.5mm"
+        ],
+        "inputVoltageMax": 4.35,
+        "maxCurrentDraw": 6
+      }
+    },
+    {
+      "id": "motor-xing2207-1850",
+      "name": "XING2 2207 1850KV Unibell Motor",
+      "manufacturer": "iFlight",
+      "model": "XING2 2207 1850KV",
+      "weightGrams": 31.6,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 1850,
+        "statorDiameterMm": 22,
+        "statorHeightMm": 7,
+        "mountingPattern": "16x16",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 25.2,
+        "maxCurrentDraw": 45
+      }
+    },
+    {
+      "id": "motor-xing2207-2750",
+      "name": "XING2 2207 2750KV Unibell Motor",
+      "manufacturer": "iFlight",
+      "model": "XING2 2207 2750KV",
+      "weightGrams": 31.6,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 2750,
+        "statorDiameterMm": 22,
+        "statorHeightMm": 7,
+        "mountingPattern": "16x16",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 16.8,
+        "maxCurrentDraw": 52
+      }
+    },
+    {
+      "id": "motor-xing1404",
+      "name": "XING 1404 4600KV Ultralight Motor",
+      "manufacturer": "iFlight",
+      "model": "XING 1404",
+      "weightGrams": 9.3,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 4600,
+        "statorDiameterMm": 14,
+        "statorHeightMm": 4,
+        "mountingPattern": "9x9",
+        "propMountingPattern": [
+          "1.5mm"
+        ],
+        "inputVoltageMax": 16.8,
+        "maxCurrentDraw": 18
+      }
+    },
+    {
+      "id": "motor-bh1504",
+      "name": "VY 1504.5 3950KV Brushless Motor",
+      "manufacturer": "BrotherHobby",
+      "model": "VY 1504.5",
+      "weightGrams": 12,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 3950,
+        "statorDiameterMm": 15,
+        "statorHeightMm": 4.5,
+        "mountingPattern": "12x12",
+        "propMountingPattern": [
+          "1.5mm",
+          "5mm"
+        ],
+        "inputVoltageMax": 16.8,
+        "maxCurrentDraw": 22
+      }
+    },
+    {
+      "id": "motor-eco2807",
+      "name": "ECO II 2807 1300KV Motor",
+      "manufacturer": "EMAX",
+      "model": "ECO II 2807",
+      "weightGrams": 48,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 1300,
+        "statorDiameterMm": 28,
+        "statorHeightMm": 7,
+        "mountingPattern": "19x19",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 25.2,
+        "maxCurrentDraw": 55
+      }
+    },
+    {
+      "id": "motor-velox2207",
+      "name": "Velox V3 2207 1950KV Motor",
+      "manufacturer": "T-Motor",
+      "model": "Velox V3 2207",
+      "weightGrams": 32.1,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 1950,
+        "statorDiameterMm": 22,
+        "statorHeightMm": 7,
+        "mountingPattern": "16x16",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 25.2,
+        "maxCurrentDraw": 48
+      }
+    },
+    {
+      "id": "motor-f40pro",
+      "name": "F40 PRO IV 1950KV FPV Motor",
+      "manufacturer": "T-Motor",
+      "model": "F40 PRO IV",
+      "weightGrams": 30.8,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 1950,
+        "statorDiameterMm": 22,
+        "statorHeightMm": 7,
+        "mountingPattern": "16x16",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 25.2,
+        "maxCurrentDraw": 51
+      }
+    },
+    {
+      "id": "prop-gemfan1635",
+      "name": "Gemfan 1635 40mm 4-Blade Propellers (Set of 4)",
+      "manufacturer": "Gemfan",
+      "model": "1635-4",
+      "weightGrams": 0.5,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 1.6,
+        "pitchInch": 1.5,
+        "mountingPattern": [
+          "1.5mm"
+        ],
+        "blades": 4
+      }
+    },
+    {
+      "id": "prop-gemfan51433",
+      "name": "Gemfan Hurricane 51433 3-Blade Propeller",
+      "manufacturer": "Gemfan",
+      "model": "Hurricane 51433",
+      "weightGrams": 3.8,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 5.1,
+        "pitchInch": 4.3,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-ethixs3",
+      "name": "HQProp Ethix S3 Watermelon 5x3.1x3 Propeller",
+      "manufacturer": "HQProp",
+      "model": "Ethix S3",
+      "weightGrams": 3.6,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 5,
+        "pitchInch": 3.1,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-hq3.5",
+      "name": "HQProp T3.5x2.5x3 3-Blade Propeller",
+      "manufacturer": "HQProp",
+      "model": "T3.5x2.5x3",
+      "weightGrams": 1.5,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 3.5,
+        "pitchInch": 2.5,
+        "mountingPattern": [
+          "5mm",
+          "1.5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-gemfan3018",
+      "name": "Gemfan Hurricane 3018 2-Blade Propeller",
+      "manufacturer": "Gemfan",
+      "model": "Hurricane 3018",
+      "weightGrams": 0.8,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 3,
+        "pitchInch": 1.8,
+        "mountingPattern": [
+          "1.5mm"
+        ],
+        "blades": 2
+      }
+    },
+    {
+      "id": "prop-hq7",
+      "name": "HQProp 7x3.5x3 3-Blade Propeller",
+      "manufacturer": "HQProp",
+      "model": "7x3.5x3",
+      "weightGrams": 8.5,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 7,
+        "pitchInch": 3.5,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "bat-tattu1300-6s",
+      "name": "Tattu R-Line Version 5.0 6S 1300mAh 150C LiPo",
+      "manufacturer": "Tattu",
+      "model": "R-Line V5 6S 1300mAh",
+      "weightGrams": 220,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 6,
+        "capacityMah": 1300,
+        "cRating": 150,
+        "chemistry": "LiPo"
+      }
+    },
+    {
+      "id": "bat-gnb450-1s",
+      "name": "GNB 1S 450mAh 100C 3.8V LiHv",
+      "manufacturer": "GNB",
+      "model": "GNB 1S 450mAh LiHv",
+      "weightGrams": 13,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 1,
+        "capacityMah": 450,
+        "cRating": 100,
+        "chemistry": "LiHv"
+      }
+    },
+    {
+      "id": "bat-tattu850-4s",
+      "name": "Tattu R-Line 4S 850mAh 95C LiPo",
+      "manufacturer": "Tattu",
+      "model": "R-Line 4S 850mAh",
+      "weightGrams": 102,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 4,
+        "capacityMah": 850,
+        "cRating": 95,
+        "chemistry": "LiPo"
+      }
+    },
+    {
+      "id": "bat-aulink4000-6s",
+      "name": "Aulink 6S 4000mAh 10C 18650 LiIon Pack",
+      "manufacturer": "Aulink",
+      "model": "6S 4000mAh LiIon",
+      "weightGrams": 300,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 6,
+        "capacityMah": 4000,
+        "cRating": 10,
+        "chemistry": "LiIon"
+      }
+    },
+    {
+      "id": "bat-cnhl1500-4s",
+      "name": "CNHL Black Series 4S 1500mAh 100C LiPo",
+      "manufacturer": "CNHL",
+      "model": "Black Series 4S 1500mAh",
+      "weightGrams": 185,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 4,
+        "capacityMah": 1500,
+        "cRating": 100,
+        "chemistry": "LiPo"
+      }
+    },
+    {
+      "id": "bat-gnb650-2s",
+      "name": "GNB 2S 650mAh 90C LiPo",
+      "manufacturer": "GNB",
+      "model": "GNB 2S 650mAh",
+      "weightGrams": 36,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 2,
+        "capacityMah": 650,
+        "cRating": 90,
+        "chemistry": "LiPo"
+      }
+    },
+    {
+      "id": "vtx-djio3",
+      "name": "DJI O3 Air Unit VTX",
+      "manufacturer": "DJI",
+      "model": "O3 Air Unit",
+      "weightGrams": 39,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "VTX",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "inputVoltageMin": 7.4,
+        "inputVoltageMax": 26.4,
+        "mountingPattern": [
+          "20x20"
+        ],
+        "maxPowerMw": 1000,
+        "protocol": "DJI O3"
+      }
+    },
+    {
+      "id": "vtx-walksnail",
+      "name": "Walksnail Avatar V2 VTX",
+      "manufacturer": "Caddx",
+      "model": "Avatar V2 VTX",
+      "weightGrams": 18,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "VTX",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "inputVoltageMin": 6,
+        "inputVoltageMax": 25.2,
+        "mountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "maxPowerMw": 1200,
+        "protocol": "Avatar"
+      }
+    },
+    {
+      "id": "vtx-hdzerolite",
+      "name": "HDZero Whoop Lite VTX",
+      "manufacturer": "Divimath",
+      "model": "HDZero Whoop Lite",
+      "weightGrams": 4.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "VTX",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "inputVoltageMin": 3.3,
+        "inputVoltageMax": 5.5,
+        "mountingPattern": [
+          "25.5x25.5"
+        ],
+        "maxPowerMw": 200,
+        "protocol": "HDZero"
+      }
+    },
+    {
+      "id": "vtx-tbsunify",
+      "name": "TBS Unify Pro32 Nano 5G8 (Analog)",
+      "manufacturer": "TBS",
+      "model": "Unify Pro32 Nano",
+      "weightGrams": 1,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "VTX",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "inputVoltageMin": 3,
+        "inputVoltageMax": 13,
+        "mountingPattern": [],
+        "maxPowerMw": 500,
+        "protocol": "Analog"
+      }
+    },
+    {
+      "id": "rx-ep1",
+      "name": "HappyModel EP1 RX ELRS 2.4GHz Receiver",
+      "manufacturer": "HappyModel",
+      "model": "EP1 RX",
+      "weightGrams": 0.4,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "RC_RECEIVER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "rx-crossfire",
+      "name": "TBS Crossfire Nano RX",
+      "manufacturer": "TBS",
+      "model": "Crossfire Nano RX",
+      "weightGrams": 0.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "RC_RECEIVER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "rx-elrslite",
+      "name": "BetaFPV ELRS Lite RX (Flat Ceramic Antenna)",
+      "manufacturer": "BetaFPV",
+      "model": "ELRS Lite RX",
+      "weightGrams": 0.4,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "RC_RECEIVER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "rx-xmplus",
+      "name": "FrSky XM+ SBUS Mini Receiver",
+      "manufacturer": "FrSky",
+      "model": "XM+ SBUS",
+      "weightGrams": 1.6,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "RC_RECEIVER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "gps-goku10",
+      "name": "GOKU GM10 Nano V3 GPS",
+      "manufacturer": "Flywoo",
+      "model": "GM10 Nano GPS",
+      "weightGrams": 2.2,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "GPS",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "gps-matekm10",
+      "name": "Matek M10-5883 GPS & Compass Module",
+      "manufacturer": "Matek Systems",
+      "model": "M10-5883",
+      "weightGrams": 7.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "GPS",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "cam-phoenix2",
+      "name": "RunCam Phoenix 2 JB Edition FPV Camera",
+      "manufacturer": "RunCam",
+      "model": "Phoenix 2 JB",
+      "weightGrams": 9,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "CAMERA",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "cam-ratel2",
+      "name": "Caddx Ratel 2 Micro Starlight FPV Camera",
+      "manufacturer": "Caddx",
+      "model": "Ratel 2",
+      "weightGrams": 6,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "CAMERA",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "strap-flywoo",
+      "name": "Flywoo Lipo Strap 15x250mm (Kevlar)",
+      "manufacturer": "Flywoo",
+      "model": "Battery Strap 250mm",
+      "weightGrams": 4.5,
+      "mainCategory": "ACCESSORIES",
+      "subCategory": "BATTERY_STRAP",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "ant-foxeer",
+      "name": "Foxeer Lollipop 4 5.8G SMA Antenna",
+      "manufacturer": "Foxeer",
+      "model": "Lollipop 4 SMA",
+      "weightGrams": 8.2,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ANTENNA",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "frame-aether-archetype",
+      "name": "Aether Archetype 4\" Frame",
+      "manufacturer": "Aether FPV",
+      "model": "Archetype 4\"",
+      "weightGrams": 150,
+      "mainCategory": "FRAME",
+      "subCategory": "FRAME",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "wheelbaseMm": 198,
+        "armThicknessMm": 5,
+        "maxPropSizeInch": 4.5,
+        "fcMountingPattern": [
+          "20x20",
+          "30.5x30.5"
+        ],
+        "motorMountingPattern": [
+          "12x12"
+        ],
+        "vtxMountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "stackHeightMaxMm": 25,
+        "topPlatePresent": true
+      }
+    },
+    {
+      "id": "fc-hdzero-halo-h7",
+      "name": "HDZero Halo H7 s ELRS Flight Controller",
+      "manufacturer": "HDZero",
+      "model": "Halo H7 FC",
+      "weightGrams": 5.6,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "FC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "mountingPattern": "20x20",
+        "inputVoltagesMax": 8,
+        "firmware": "Betaflight",
+        "gyro": "ICM-42688-P",
+        "mcu": "H7",
+        "uartCount": 6,
+        "hasBarometer": true,
+        "hasBluetooth": false,
+        "hasBec": true
+      }
+    },
+    {
+      "id": "esc-hdzero-halo-70a",
+      "name": "HDZero Halo 70A 8S AM32 ESC",
+      "manufacturer": "HDZero",
+      "model": "Halo 70A ESC",
+      "weightGrams": 7.8,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "ESC",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "continuousCurrentAmps": 70,
+        "burstCurrentAmps": 100,
+        "mountingPattern": "20x20",
+        "inputVoltagesMax": 40,
+        "firmware": "AM32",
+        "motorOutputCount": 4,
+        "hasTelemetry": true
+      }
+    },
+    {
+      "id": "motor-gts2105-2950",
+      "name": "RCinpower GTS V3 2105 Plus 2950Kv Motor",
+      "manufacturer": "RCinpower",
+      "model": "GTS V3 2105 Plus 2950Kv",
+      "weightGrams": 21,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 2950,
+        "statorDiameterMm": 21,
+        "statorHeightMm": 5.5,
+        "mountingPattern": "12x12",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 16.8,
+        "maxCurrentDraw": 25
+      }
+    },
+    {
+      "id": "motor-gts2105-1850",
+      "name": "RCinpower GTS V3 2105 Plus 1850Kv Motor",
+      "manufacturer": "RCinpower",
+      "model": "GTS V3 2105 Plus 1850Kv",
+      "weightGrams": 20,
+      "mainCategory": "PROPULSION",
+      "subCategory": "MOTOR",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "kv": 1850,
+        "statorDiameterMm": 21,
+        "statorHeightMm": 5.5,
+        "mountingPattern": "12x12",
+        "propMountingPattern": [
+          "5mm"
+        ],
+        "inputVoltageMax": 25.2,
+        "maxCurrentDraw": 12
+      }
+    },
+    {
+      "id": "rx-flywoo-el24p",
+      "name": "Flywoo ELRS 2.4G EL24P TCXO Receiver",
+      "manufacturer": "Flywoo",
+      "model": "EL24P TCXO",
+      "weightGrams": 0.44,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "RC_RECEIVER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "prop-gemfan4525",
+      "name": "Gemfan Hurricane 4525 3-Blade Propeller",
+      "manufacturer": "Gemfan",
+      "model": "Hurricane 4525-3",
+      "weightGrams": 2.22,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 4.5,
+        "pitchInch": 2.5,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-gemfan4023",
+      "name": "Gemfan Hurricane 4023 3-Blade Propeller",
+      "manufacturer": "Gemfan",
+      "model": "Hurricane 4023-3",
+      "weightGrams": 1.98,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 4,
+        "pitchInch": 2.3,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-hq4030",
+      "name": "HQProp 4x3x3 V2 3-Blade Propeller",
+      "manufacturer": "HQProp",
+      "model": "4x3x3 V2",
+      "weightGrams": 2.2,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 4,
+        "pitchInch": 3,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-hq4025",
+      "name": "HQProp 4x2.5x3 V2S Durable 3-Blade Propeller",
+      "manufacturer": "HQProp",
+      "model": "4x2.5x3 V2S",
+      "weightGrams": 2.1,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 4,
+        "pitchInch": 2.5,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "prop-gemfan4032",
+      "name": "Gemfan Windancer 4032 3-Blade Propeller",
+      "manufacturer": "Gemfan",
+      "model": "Windancer 4032-3",
+      "weightGrams": 3.12,
+      "mainCategory": "PROPULSION",
+      "subCategory": "PROPELLER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "diameterInch": 4,
+        "pitchInch": 3.2,
+        "mountingPattern": [
+          "5mm"
+        ],
+        "blades": 3
+      }
+    },
+    {
+      "id": "vtx-flywoo-o4-wide",
+      "name": "Flywoo DJI O4 Wide Air Unit VTX",
+      "manufacturer": "Flywoo",
+      "model": "DJI O4 Wide",
+      "weightGrams": 21.5,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "VTX",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "inputVoltageMin": 3.7,
+        "inputVoltageMax": 13.2,
+        "mountingPattern": [
+          "20x20",
+          "25.5x25.5"
+        ],
+        "maxPowerMw": 1000,
+        "protocol": "DJI O4"
+      }
+    },
+    {
+      "id": "gps-hglrc-m100pro",
+      "name": "HGLRC M100 Pro GPS & Compass Module",
+      "manufacturer": "HGLRC",
+      "model": "M100 Pro",
+      "weightGrams": 7.9,
+      "mainCategory": "ELECTRONICS",
+      "subCategory": "GPS",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "buzzer-flywoo-finder",
+      "name": "Flywoo Finder V1.0 Buzzer",
+      "manufacturer": "Flywoo",
+      "model": "Finder V1.0",
+      "weightGrams": 2.7,
+      "mainCategory": "ACCESSORIES",
+      "subCategory": "BUZZER",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {}
+    },
+    {
+      "id": "bat-cnhl1100-4s",
+      "name": "CNHL Black Series 4S 1100mAh 130C LiPo",
+      "manufacturer": "CNHL",
+      "model": "Black Series 4S 1100mAh",
+      "weightGrams": 140,
+      "mainCategory": "PROPULSION",
+      "subCategory": "BATTERY",
+      "isComposite": false,
+      "integratedPartIds": [],
+      "isArchived": false,
+      "attributes": {
+        "cellCount": 4,
+        "capacityMah": 1100,
+        "cRating": 130,
+        "chemistry": "LiPo"
+      }
+    }
+  ]
+}

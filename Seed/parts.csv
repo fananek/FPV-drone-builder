@@ -1,0 +1,71 @@
+name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite
+Mobula7 V2 75mm Brushless Whoop Frame,HappyModel,Mobula7 V2,5.5,FRAME,FRAME,false
+Cinelog35 V2 Freestyle CineWhoop Frame,GepRC,Cinelog35 V2,116,FRAME,FRAME,false
+Apex 5" Freestyle Frame,ImpulseRC,Apex 5,125,FRAME,FRAME,false
+SpeedyBee Bee35 CineWhoop Frame,SpeedyBee,Bee35,138,FRAME,FRAME,false
+Nazgul Evoque F5D DeadCat Frame,iFlight,Nazgul Evoque F5D,150,FRAME,FRAME,false
+Explorer LR 4 Frame V2,Flywoo,Explorer LR 4 V2,41,FRAME,FRAME,false
+Chimera7 Pro V2 Long Range Frame,iFlight,Chimera7 Pro V2,290,FRAME,FRAME,false
+SpeedyBee F405 V3 Flight Controller,SpeedyBee,F405 V3,9.6,ELECTRONICS,FC,false
+Blitz F7 V2 Flight Controller,iFlight,Blitz F7 V2,8.5,ELECTRONICS,FC,false
+Matek H743-WING V3 Flight Controller,Matek Systems,H743-WING V3,26,ELECTRONICS,FC,false
+Holybro Kakute H7 V2 Flight Controller,Holybro,Kakute H7 V2,8,ELECTRONICS,FC,false
+SpeedyBee 50A BLHeli_S 4-in-1 ESC,SpeedyBee,50A 4-in-1,15,ELECTRONICS,ESC,false
+iFlight Blitz E55S 4-in-1 ESC,iFlight,Blitz E55S,16.5,ELECTRONICS,ESC,false
+T-Motor F45A V2 4-in-1 ESC,T-Motor,F45A V2,18,ELECTRONICS,ESC,false
+Holybro Tekko32 F4 4-in-1 65A ESC,Holybro,Tekko32 65A,22,ELECTRONICS,ESC,false
+Foxeer Reaper Extreme 60A 4-in-1 ESC,Foxeer,Reaper Extreme 60A,18,ELECTRONICS,ESC,false
+HGLRC Zeus 35A 4-in-1 ESC,HGLRC,Zeus 35A,9.8,ELECTRONICS,ESC,false
+HappyModel SuperX HD ELRS 1-2S AIO,HappyModel,SuperX HD ELRS,5.6,ELECTRONICS,AIO,true
+BetaFPV F4 1S 12A Brushless AIO,BetaFPV,F4 1S 12A AIO,4.5,ELECTRONICS,AIO,true
+DarwinFPV 15A 1-3S F411 AIO,DarwinFPV,Darwin 15A AIO,5.5,ELECTRONICS,AIO,true
+GepRC Taker G4 35A AIO V2,GepRC,Taker G4 35A,8.5,ELECTRONICS,AIO,true
+SE0802 19000KV Brushless Motor,HappyModel,SE0802,1.9,PROPULSION,MOTOR,false
+XING2 2207 1850KV Unibell Motor,iFlight,XING2 2207 1850KV,31.6,PROPULSION,MOTOR,false
+XING2 2207 2750KV Unibell Motor,iFlight,XING2 2207 2750KV,31.6,PROPULSION,MOTOR,false
+XING 1404 4600KV Ultralight Motor,iFlight,XING 1404,9.3,PROPULSION,MOTOR,false
+VY 1504.5 3950KV Brushless Motor,BrotherHobby,VY 1504.5,12,PROPULSION,MOTOR,false
+ECO II 2807 1300KV Motor,EMAX,ECO II 2807,48,PROPULSION,MOTOR,false
+Velox V3 2207 1950KV Motor,T-Motor,Velox V3 2207,32.1,PROPULSION,MOTOR,false
+F40 PRO IV 1950KV FPV Motor,T-Motor,F40 PRO IV,30.8,PROPULSION,MOTOR,false
+Gemfan 1635 40mm 4-Blade Propellers (Set of 4),Gemfan,1635-4,0.5,PROPULSION,PROPELLER,false
+Gemfan Hurricane 51433 3-Blade Propeller,Gemfan,Hurricane 51433,3.8,PROPULSION,PROPELLER,false
+HQProp Ethix S3 Watermelon 5x3.1x3 Propeller,HQProp,Ethix S3,3.6,PROPULSION,PROPELLER,false
+HQProp T3.5x2.5x3 3-Blade Propeller,HQProp,T3.5x2.5x3,1.5,PROPULSION,PROPELLER,false
+Gemfan Hurricane 3018 2-Blade Propeller,Gemfan,Hurricane 3018,0.8,PROPULSION,PROPELLER,false
+HQProp 7x3.5x3 3-Blade Propeller,HQProp,7x3.5x3,8.5,PROPULSION,PROPELLER,false
+Tattu R-Line Version 5.0 6S 1300mAh 150C LiPo,Tattu,R-Line V5 6S 1300mAh,220,PROPULSION,BATTERY,false
+GNB 1S 450mAh 100C 3.8V LiHv,GNB,GNB 1S 450mAh LiHv,13,PROPULSION,BATTERY,false
+Tattu R-Line 4S 850mAh 95C LiPo,Tattu,R-Line 4S 850mAh,102,PROPULSION,BATTERY,false
+Aulink 6S 4000mAh 10C 18650 LiIon Pack,Aulink,6S 4000mAh LiIon,300,PROPULSION,BATTERY,false
+CNHL Black Series 4S 1500mAh 100C LiPo,CNHL,Black Series 4S 1500mAh,185,PROPULSION,BATTERY,false
+GNB 2S 650mAh 90C LiPo,GNB,GNB 2S 650mAh,36,PROPULSION,BATTERY,false
+DJI O3 Air Unit VTX,DJI,O3 Air Unit,39,ELECTRONICS,VTX,false
+Walksnail Avatar V2 VTX,Caddx,Avatar V2 VTX,18,ELECTRONICS,VTX,false
+HDZero Whoop Lite VTX,Divimath,HDZero Whoop Lite,4.5,ELECTRONICS,VTX,false
+TBS Unify Pro32 Nano 5G8 (Analog),TBS,Unify Pro32 Nano,1,ELECTRONICS,VTX,false
+HappyModel EP1 RX ELRS 2.4GHz Receiver,HappyModel,EP1 RX,0.4,ELECTRONICS,RC_RECEIVER,false
+TBS Crossfire Nano RX,TBS,Crossfire Nano RX,0.5,ELECTRONICS,RC_RECEIVER,false
+BetaFPV ELRS Lite RX (Flat Ceramic Antenna),BetaFPV,ELRS Lite RX,0.4,ELECTRONICS,RC_RECEIVER,false
+FrSky XM+ SBUS Mini Receiver,FrSky,XM+ SBUS,1.6,ELECTRONICS,RC_RECEIVER,false
+GOKU GM10 Nano V3 GPS,Flywoo,GM10 Nano GPS,2.2,ELECTRONICS,GPS,false
+Matek M10-5883 GPS & Compass Module,Matek Systems,M10-5883,7.5,ELECTRONICS,GPS,false
+RunCam Phoenix 2 JB Edition FPV Camera,RunCam,Phoenix 2 JB,9,ELECTRONICS,CAMERA,false
+Caddx Ratel 2 Micro Starlight FPV Camera,Caddx,Ratel 2,6,ELECTRONICS,CAMERA,false
+Flywoo Lipo Strap 15x250mm (Kevlar),Flywoo,Battery Strap 250mm,4.5,ACCESSORIES,BATTERY_STRAP,false
+Foxeer Lollipop 4 5.8G SMA Antenna,Foxeer,Lollipop 4 SMA,8.2,ELECTRONICS,ANTENNA,false
+Aether Archetype 4" Frame,Aether FPV,Archetype 4",150,FRAME,FRAME,false
+HDZero Halo H7 s ELRS Flight Controller,HDZero,Halo H7 FC,5.6,ELECTRONICS,FC,false
+HDZero Halo 70A 8S AM32 ESC,HDZero,Halo 70A ESC,7.8,ELECTRONICS,ESC,false
+RCinpower GTS V3 2105 Plus 2950Kv Motor,RCinpower,GTS V3 2105 Plus 2950Kv,21,PROPULSION,MOTOR,false
+RCinpower GTS V3 2105 Plus 1850Kv Motor,RCinpower,GTS V3 2105 Plus 1850Kv,20,PROPULSION,MOTOR,false
+Flywoo ELRS 2.4G EL24P TCXO Receiver,Flywoo,EL24P TCXO,0.44,ELECTRONICS,RC_RECEIVER,false
+Gemfan Hurricane 4525 3-Blade Propeller,Gemfan,Hurricane 4525-3,2.22,PROPULSION,PROPELLER,false
+Gemfan Hurricane 4023 3-Blade Propeller,Gemfan,Hurricane 4023-3,1.98,PROPULSION,PROPELLER,false
+HQProp 4x3x3 V2 3-Blade Propeller,HQProp,4x3x3 V2,2.2,PROPULSION,PROPELLER,false
+HQProp 4x2.5x3 V2S Durable 3-Blade Propeller,HQProp,4x2.5x3 V2S,2.1,PROPULSION,PROPELLER,false
+Gemfan Windancer 4032 3-Blade Propeller,Gemfan,Windancer 4032-3,3.12,PROPULSION,PROPELLER,false
+Flywoo DJI O4 Wide Air Unit VTX,Flywoo,DJI O4 Wide,21.5,ELECTRONICS,VTX,false
+HGLRC M100 Pro GPS & Compass Module,HGLRC,M100 Pro,7.9,ELECTRONICS,GPS,false
+Flywoo Finder V1.0 Buzzer,Flywoo,Finder V1.0,2.7,ACCESSORIES,BUZZER,false
+CNHL Black Series 4S 1100mAh 130C LiPo,CNHL,Black Series 4S 1100mAh,140,PROPULSION,BATTERY,false

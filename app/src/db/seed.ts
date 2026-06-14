@@ -1,6 +1,8 @@
 import { db } from "./index";
 import { parts, thrustTestData } from "./schema";
 import { sql } from "drizzle-orm";
+import * as fs from "fs";
+import * as path from "path";
 
 async function main() {
   console.log("Seeding database...");
@@ -1729,8 +1731,66 @@ async function main() {
     });
   }
 
-  console.log(`Successfully seeded ${seededThrustTests.length} thrust test datasets.`);
   console.log("Seeding complete! Database is ready.");
+
+  // Write seed data to Seed/ directory for production import
+  try {
+    const seedDir = path.join(__dirname, "../../../Seed");
+    if (!fs.existsSync(seedDir)) {
+      fs.mkdirSync(seedDir, { recursive: true });
+    }
+
+    // 1. Write parts.json
+    fs.writeFileSync(
+      path.join(seedDir, "parts.json"),
+      JSON.stringify({ parts: seededParts }, null, 2),
+      "utf-8"
+    );
+    console.log("Exported Seed/parts.json");
+
+    // 2. Write thrust_tests.json
+    fs.writeFileSync(
+      path.join(seedDir, "thrust_tests.json"),
+      JSON.stringify({ tests: seededThrustTests }, null, 2),
+      "utf-8"
+    );
+    console.log("Exported Seed/thrust_tests.json");
+
+    // 3. Write parts.csv
+    const partsCsvHeaders = "name,manufacturer,model,weightGrams,mainCategory,subCategory,isComposite\n";
+    const partsCsvRows = seededParts.map(p => {
+      const name = p.name.includes(",") ? `"${p.name.replace(/"/g, '""')}"` : p.name;
+      const manufacturer = p.manufacturer.includes(",") ? `"${p.manufacturer.replace(/"/g, '""')}"` : p.manufacturer;
+      const model = p.model.includes(",") ? `"${p.model.replace(/"/g, '""')}"` : p.model;
+      return `${name},${manufacturer},${model},${p.weightGrams},${p.mainCategory},${p.subCategory},${p.isComposite}`;
+    }).join("\n");
+    fs.writeFileSync(
+      path.join(seedDir, "parts.csv"),
+      partsCsvHeaders + partsCsvRows,
+      "utf-8"
+    );
+    console.log("Exported Seed/parts.csv");
+
+    // 4. Write thrust_tests.csv
+    const thrustCsvHeaders = "motorId,propellerId,batteryCellCount,batteryChemistry,sourceLabel,isEmpirical,testPoints\n";
+    const thrustCsvRows = seededThrustTests.map(t => {
+      const sourceLabel = t.sourceLabel ? (t.sourceLabel.includes(",") ? `"${t.sourceLabel.replace(/"/g, '""')}"` : t.sourceLabel) : "";
+      const testPointsStr = t.testPoints.map(p => 
+        `${p.throttlePercent}_${p.currentAmps}_${p.thrustGrams}_${p.voltageVolts}`
+      ).join(";");
+      return `${t.motorId},${t.propellerId},${t.batteryCellCount},${t.batteryChemistry},${sourceLabel},${t.isEmpirical},${testPointsStr}`;
+    }).join("\n");
+    fs.writeFileSync(
+      path.join(seedDir, "thrust_tests.csv"),
+      thrustCsvHeaders + thrustCsvRows,
+      "utf-8"
+    );
+    console.log("Exported Seed/thrust_tests.csv");
+
+  } catch (exportErr) {
+    console.error("Failed to export seed files: ", exportErr);
+  }
+
   await db.run(sql`PRAGMA foreign_keys = ON;`);
 }
 
