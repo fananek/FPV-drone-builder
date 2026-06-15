@@ -167,7 +167,7 @@ function DashboardContent() {
 
   // Setup auto-save hook
   const { saveStatus } = useAutoSave(
-    activeId || "",
+    activeBuild ? (activeId || "") : "",
     {
       name: activeBuild?.name || "",
       description: activeBuild?.description || "",
@@ -182,7 +182,7 @@ function DashboardContent() {
       // On save success, update local version to match server
       setActiveBuild((prev) => (prev ? { ...prev, version: updatedBuild.version } : null));
     },
-    (latestBuild) => {
+    (latestBuild: Build) => {
       // On conflict, reload build state
       toast.warning("Reloading latest telemetry data...");
       setActiveBuild(latestBuild);
@@ -915,7 +915,13 @@ function MultiValueTagInput({
   const [inputValue, setInputValue] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
-  const filteredSuggestions = allExistingTags.filter(
+  const defaultSuggestions = ["freestyle", "cinematic", "racing", "longrange", "indoor"];
+
+  const combinedSuggestions = Array.from(
+    new Set([...defaultSuggestions, ...allExistingTags.map((t) => t.toLowerCase())])
+  );
+
+  const filteredSuggestions = combinedSuggestions.filter(
     (tag) =>
       tag.toLowerCase().includes(inputValue.toLowerCase()) &&
       !tags.includes(tag)
